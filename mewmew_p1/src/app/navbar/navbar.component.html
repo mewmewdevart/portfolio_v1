@@ -1,0 +1,38 @@
+<mat-toolbar role="navigation" class="toolbar" aria-label="Navegação Principal">
+	<div class="toolbar__container" id="containerNavigation">
+	
+	  <!-- Logo and Navigation Section for Big Screens-->
+	  <div class="toolbar__content">
+		<!-- Logo Section -->
+		<div class="toolbar__logo-section" routerLink="#" role="link">
+		  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+			<image href="../../assets/assets/images/logo.svg" width="100" height="100"/>
+			<title>MewmewDev Logo</title>
+		  </svg>
+		  MewmewDev
+		</div>
+  
+		<span class="toolbar__spacer menu-spacer"></span>
+  
+		<!-- Navigation Links Section -->
+		<div class="toolbar__links-section">
+		  <button mat-button routerLink="#" role="button" aria-label="Sobre" aria-current="page" class="toolbar__button">
+			<span class="toolbar__menu-number">01.</span>
+			<span class="toolbar__menu-text">Sobre</span>
+		  </button>
+		  <button mat-button routerLink="#" role="button" aria-label="Experiência" class="toolbar__button">
+			<span class="toolbar__menu-number">02.</span>
+			<span class="toolbar__menu-text">Experiência</span>
+		  </button>
+		  <button mat-button routerLink="#" role="button" aria-label="Projetos" class="toolbar__button">
+			<span class="toolbar__menu-number">03.</span>
+			<span class="toolbar__menu-text">Projetos</span>
+		  </button>
+		  <button mat-button routerLink="#" role="button" aria-label="Contato" class="toolbar__button">
+			<span class="toolbar__menu-number">04.</span>
+			<span class="toolbar__menu-text">Contato</span>
+		  </button>
+		</div>
+	  </div>
+	</div>
+</mat-toolbar>

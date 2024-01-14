@@ -1,0 +1,35 @@
+@import '../../styles.sass'
+
+mat-toolbar
+	position: fixed
+	background-color: transparent
+	#containerNavigation
+		margin: 0 auto
+		.toolbar__content
+			width: 1140px
+			display: flex
+			justify-content: space-between
+			align-content: center
+			color: $colorTertiary
+			.toolbar__logo-section
+				display: flex
+				gap: 10px
+				margin-top: 3px
+				font-size: $fontMediumSize
+				color: $colorTertiary
+				font-weight: bold
+			button
+				.toolbar__menu-text
+					font-size: $fontMediumSize
+					color: $colorTertiary
+				.toolbar__menu-number
+					color: $colorMainLight
+				&:hover
+					background-color: $colorMainLight
+					color: $colorMainBackground
+					.toolbar__menu-text
+						color: $colorMainBackground
+					.toolbar__menu-number
+						color: $colorSecondary
+				&:focus
+					outline: 2px solid $colorMainLight								
