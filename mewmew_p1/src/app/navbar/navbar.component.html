@@ -1,12 +1,23 @@
 <mat-toolbar role="navigation" class="toolbar" aria-label="Navegação Principal">
 	<div class="toolbar__container" id="containerNavigation">
-	
-	  <!-- Logo and Navigation Section for Big Screens-->
+  
+		<div class="toolbar__extern">
+			<div class="toolbar__extern-left">
+			  <div class="toolbar__line"></div>
+			  <div class="toolbar__lineSocials">
+				<a *ngFor="let item of lineItems" [href]="item.url" class="toolbar__socials" [attr.aria-label]="item.name">
+				  <img [src]="item.iconPath" alt="{{item.name}}" class="toolbar__socials-icon">
+				</a>
+			  </div>
+			</div>
+		</div>
+		  
+	  <!-- Logo and Navigation Section -->
 	  <div class="toolbar__content">
 		<!-- Logo Section -->
-		<div class="toolbar__logo-section" routerLink="#" role="link">
+		<div class="toolbar__logo-section" (click)="navigate('/')">
 		  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-			<image href="../../assets/assets/images/logo.svg" width="100" height="100"/>
+			<image href="../../assets/assets/images/icons/logo.svg" width="100" height="100"/>
 			<title>MewmewDev Logo</title>
 		  </svg>
 		  MewmewDev
@@ -14,25 +25,33 @@
   
 		<span class="toolbar__spacer menu-spacer"></span>
   
-		<!-- Navigation Links Section -->
+		<!-- Navigation Links Section-->
 		<div class="toolbar__links-section">
-		  <button mat-button routerLink="#" role="button" aria-label="Sobre" aria-current="page" class="toolbar__button">
-			<span class="toolbar__menu-number">01.</span>
-			<span class="toolbar__menu-text">Sobre</span>
-		  </button>
-		  <button mat-button routerLink="#" role="button" aria-label="Experiência" class="toolbar__button">
-			<span class="toolbar__menu-number">02.</span>
-			<span class="toolbar__menu-text">Experiência</span>
-		  </button>
-		  <button mat-button routerLink="#" role="button" aria-label="Projetos" class="toolbar__button">
-			<span class="toolbar__menu-number">03.</span>
-			<span class="toolbar__menu-text">Projetos</span>
-		  </button>
-		  <button mat-button routerLink="#" role="button" aria-label="Contato" class="toolbar__button">
-			<span class="toolbar__menu-number">04.</span>
-			<span class="toolbar__menu-text">Contato</span>
-		  </button>
+			<div class="toolbar__links-section">
+		
+				<!-- Big Screens Links -->
+				<div class="bigScreen__links">
+					<button *ngFor="let item of menuItems" mat-button (click)="navigate(item.route)" role="button" class="toolbar__button" [attr.aria-label]="item.label">
+						<span class="toolbar__menu-number">{{menuItems.indexOf(item) + 1 | number:'2.0-0'}}.</span>
+						<span class="toolbar__menu-text">{{item.label}}</span>
+					</button>
+				</div>
+
+				<!-- Small Screen Links -->
+				<div class="smallScreen__links">
+					<button mat-button [matMenuTriggerFor]="menu">
+						<mat-icon>format_align_right</mat-icon>
+					</button>
+					<mat-menu #menu="matMenu">
+						<button *ngFor="let item of menuItems" mat-menu-item (click)="navigate(item.route)" class="toolbar__button" [attr.aria-label]="item.label">
+						<span class="toolbar__menu-number">{{menuItems.indexOf(item) + 1 | number:'2.0-0'}}.</span>
+						<span class="toolbar__menu-text">{{item.label}}</span>
+						</button>
+					</mat-menu>
+				</div>
+			</div>
 		</div>
 	  </div>
 	</div>
-</mat-toolbar>
+  </mat-toolbar>
+  

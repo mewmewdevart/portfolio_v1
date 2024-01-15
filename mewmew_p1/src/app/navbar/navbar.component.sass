@@ -4,17 +4,46 @@ mat-toolbar
 	position: fixed
 	background-color: transparent
 	#containerNavigation
+		background-color: $colorMainBackground
+		width: 90%
 		margin: 0 auto
+		.toolbar__extern
+			position: absolute
+			top: 0
+			left: 4%
+			width: 28px
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			.toolbar__line
+				display: block
+				height: 100vh
+				background-color: $colorMainLight
+				width: 3px
+				margin-left: 13px
+				margin-bottom: 10px
+			.toolbar__lineSocials
+				display: flex
+				flex-direction: column
+				gap: 10px
+				.toolbar__socials
+					img
+						width: 100%
+						height: auto 
+						&:hover
+							transform: scale(1.4)
+						&:focus
+							outline: 2px solid $colorMainLight
 		.toolbar__content
-			width: 1140px
 			display: flex
 			justify-content: space-between
-			align-content: center
-			color: $colorTertiary
+			align-items: center
+			width: 100%
 			.toolbar__logo-section
 				display: flex
 				gap: 10px
-				margin-top: 3px
+				padding: 5px 10px
 				font-size: $fontMediumSize
 				color: $colorTertiary
 				font-weight: bold
@@ -32,4 +61,20 @@ mat-toolbar
 					.toolbar__menu-number
 						color: $colorSecondary
 				&:focus
-					outline: 2px solid $colorMainLight								
+					outline: 2px solid $colorMainLight
+			.bigScreen__links
+				display: block
+
+.smallScreen__links
+	display: none
+	mat-icon
+		color: $colorSecondary
+
+@media screen and (max-width: 900px)
+	mat-toolbar
+		#containerNavigation
+			.toolbar__content
+				.smallScreen__links
+					display: block
+				.bigScreen__links
+					display: none
