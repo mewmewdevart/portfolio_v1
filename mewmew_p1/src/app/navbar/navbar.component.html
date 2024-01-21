@@ -5,7 +5,7 @@
 			<div class="toolbar__extern-left">
 			  <div class="toolbar__line"></div>
 			  <div class="toolbar__lineSocials">
-				<a *ngFor="let item of socialIcons" [href]="item.url" class="toolbar__socials" [attr.aria-label]="item.name">
+				<a *ngFor="let item of socialIcons" [href]="item.url" class="toolbar__socials" [attr.aria-label]="item.name" target="_blank">
 				  <img [src]="item.iconPath" alt="{{item.name}}" class="toolbar__socials-icon">
 				</a>
 			  </div>
@@ -34,6 +34,10 @@
 					<button *ngFor="let item of menuItems" mat-button (click)="navigate(item.route)" role="button" class="toolbar__button" [attr.aria-label]="item.label">
 						<span class="toolbar__menu-number">{{menuItems.indexOf(item) + 1 | number:'2.0-0'}}.</span>
 						<span class="toolbar__menu-text">{{item.label}}</span>
+					</button>
+
+					<button mat-buttonrole="button" class="toolbar__button">
+						<span class="toolbar__menu-text cv">Curriculo</span>
 					</button>
 				</div>
 

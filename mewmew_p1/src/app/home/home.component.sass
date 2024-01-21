@@ -5,7 +5,7 @@
 	margin: 0 auto
 	min-height: 100vh
 	display: flex
-	justify-content: center
+	justify-content: flex-end
 	flex-direction: column
 	align-items: center
 	background-image: url('../../assets/assets/images/bgMe.png')
@@ -14,14 +14,10 @@
 	background-repeat: no-repeat
 	.container
 		max-width: 89.6% !important
-		min-height: 100vh
-		display: flex
-		justify-content: space-between
-		align-items: flex-end
+		margin-bottom: 10%
 		.home__introduction
-			margin-bottom: 10%
 			h1
-				width: 70%
+				width: 80%
 				color: $colorSecondary
 				span
 					font-weight: 500
@@ -58,7 +54,7 @@
 					color: $colorMainLight
 				.home__bar-letter
 					color: $colorSecondary
-	
+
 @media screen and (max-width: 900px)
 	.container-fluid
 		background-size: 70%
@@ -75,16 +71,11 @@
 				display: none
 
 @media screen and (max-width: 1400px)
-	.container-fluid
+	.home
 		background-size: 50%
 		background-position: center 10%
 		.container
+			margin-bottom: 5%
 			.home__introduction
-				width: 50%
-				margin-bottom: 15%
-				h1
-					width: 100%
-				p
-					width: 100%
-			.home__bar
-				padding-top: 15%
+				h1, p
+					width: 90%
