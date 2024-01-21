@@ -1,11 +1,11 @@
 @import '../../styles.sass'
 
-.container-fluid
+.home
 	width: 100%
 	margin: 0 auto
 	min-height: 100vh
 	display: flex
-	justify-content: flex-end
+	justify-content: flex-start
 	flex-direction: column
 	align-items: center
 	background-image: url('../../assets/assets/images/bgMe.png')
@@ -14,7 +14,7 @@
 	background-repeat: no-repeat
 	.container
 		max-width: 89.6% !important
-		margin-bottom: 10%
+		padding-top: 25%
 		.home__introduction
 			h1
 				width: 80%
@@ -56,13 +56,12 @@
 					color: $colorSecondary
 
 @media screen and (max-width: 900px)
-	.container-fluid
-		background-size: 70%
-		background-position: center 10%
+	.home
+		justify-content: center
+		background-image: none
 		.container
 			.home__introduction
 				width: 100%
-				margin-bottom: 15%
 				h1
 					width: 100%
 				p
@@ -70,12 +69,11 @@
 			.home__bar
 				display: none
 
+
 @media screen and (max-width: 1400px)
 	.home
-		background-size: 50%
-		background-position: center 10%
 		.container
-			margin-bottom: 5%
+			padding-top: 15%
 			.home__introduction
-				h1, p
-					width: 90%
+					h1, p
+						width: 90%

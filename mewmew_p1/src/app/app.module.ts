@@ -16,6 +16,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProjectsComponent } from './projects/projects.component';
     NavbarComponent,
     HomeComponent,
     AboutMeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
