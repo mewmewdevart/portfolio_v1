@@ -5,7 +5,7 @@
 			<div class="toolbar__extern-left">
 			  <div class="toolbar__line"></div>
 			  <div class="toolbar__lineSocials">
-				<a *ngFor="let item of lineItems" [href]="item.url" class="toolbar__socials" [attr.aria-label]="item.name">
+				<a *ngFor="let item of socialIcons" [href]="item.url" class="toolbar__socials" [attr.aria-label]="item.name">
 				  <img [src]="item.iconPath" alt="{{item.name}}" class="toolbar__socials-icon">
 				</a>
 			  </div>

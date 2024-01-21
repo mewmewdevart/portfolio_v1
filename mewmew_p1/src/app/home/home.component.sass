@@ -1,0 +1,90 @@
+@import '../../styles.sass'
+
+.container-fluid
+	width: 100%
+	margin: 0 auto
+	min-height: 100vh
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: center
+	background-image: url('../../assets/assets/images/bgMe.png')
+	background-size: 40%
+	background-position: center 50%
+	background-repeat: no-repeat
+	.container
+		max-width: 89.6% !important
+		min-height: 100vh
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		.home__introduction
+			margin-bottom: 10%
+			h1
+				width: 70%
+				color: $colorSecondary
+				span
+					font-weight: 500
+					color: $colorMainLight
+			p
+				width: 75%
+				color: $colorTertiary
+				font-style: normal
+				font-weight: 400
+				line-height: 25px
+			button
+				display: inline-flex
+				padding: 12px 16px
+				align-items: flex-start
+				border: 2px solid $colorMainLight
+				color: $colorSecondary
+				font-weight: 500
+				&:hover
+					transform: scale(1.1)
+					background-color: $colorMainLight
+					color: $colorMainBackground
+				&:focus
+					outline: 2px solid $colorMainLight
+		.home__bar
+			text-align: right
+			.home__bar-description
+				background-color: $colorMainBackground
+				display: inline-flex
+				padding: 5px 10px !important
+				border: 2px solid $colorMainLight
+				svg
+					width: 20px
+				.home__bar-subtitle
+					color: $colorMainLight
+				.home__bar-letter
+					color: $colorSecondary
+	
+@media screen and (max-width: 900px)
+	.container-fluid
+		background-size: 70%
+		background-position: center 10%
+		.container
+			.home__introduction
+				width: 100%
+				margin-bottom: 15%
+				h1
+					width: 100%
+				p
+					width: 100%
+			.home__bar
+				display: none
+
+@media screen and (max-width: 1400px)
+	.container-fluid
+		background-size: 50%
+		background-position: center 10%
+		.container
+			.home__introduction
+				width: 50%
+				margin-bottom: 15%
+				h1
+					width: 100%
+				p
+					width: 100%
+			.home__bar
+				padding-top: 15%
