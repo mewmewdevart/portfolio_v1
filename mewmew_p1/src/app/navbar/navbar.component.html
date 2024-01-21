@@ -45,7 +45,8 @@
 				<div class="smallScreen__links">
 					<button mat-button [matMenuTriggerFor]="menu">
 						<mat-icon>format_align_right</mat-icon>
-					</button>
+						<span class="sr-only">Menu</span>
+					  </button>					  
 					<mat-menu #menu="matMenu">
 						<button *ngFor="let item of menuItems" mat-menu-item (click)="navigate(item.route)" class="toolbar__button" [attr.aria-label]="item.label">
 						<span class="toolbar__menu-number">{{menuItems.indexOf(item) + 1 | number:'2.0-0'}}.</span>
