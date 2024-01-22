@@ -1,0 +1,33 @@
+{
+	"name": "MewmewDev Portfolio",
+	"short_name": "MewmewDev",
+	"description": "Desenvolvedora de Software apaixonada por arte e tecnologia.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#1F1723",
+	"theme_color": "#C28EFF",
+	"icons": [
+	  {
+		"src": "./android-chrome-512x512.png",
+		"sizes": "192x192",
+		"type": "image/png",
+		"purpose": "maskable"
+	  },
+	  {
+		"src": "./favicon-16x16.png",
+		"sizes": "16x16",
+		"type": "image/png"
+	  },
+	  {
+		"src": "./favicon-32x32.png",
+		"sizes": "32x32",
+		"type": "image/png"
+	  },
+	  {
+		"src": "./android-chrome-512x512.png",
+		"sizes": "512x512",
+		"type": "image/png"
+	  }
+	]
+  }
+  
