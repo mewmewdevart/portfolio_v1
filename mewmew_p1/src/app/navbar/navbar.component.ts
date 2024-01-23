@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommunicationService } from '../communication.service';
 
@@ -9,12 +9,25 @@ import { CommunicationService } from '../communication.service';
 })
 export class NavbarComponent {
   menuItems = this.communicationService.menuItems;
-
-  // Social icons from CommunicationService
   socialIcons = this.communicationService.socialIcons;
-  constructor(private router: Router, private communicationService: CommunicationService) {}
+
+  sectionIds: { [key: string]: string } = {};
+
+  constructor(private router: Router, private communicationService: CommunicationService, private el: ElementRef) {
+    // Inicialize sectionIds no construtor
+    this.sectionIds = this.communicationService.sectionIds;
+  }
 
   navigate(route: string): void {
-    this.router.navigateByUrl(route);
+    if (route.startsWith('#')) {
+      const section = this.sectionIds[route.slice(1)];
+      const element = document.getElementById(section);
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      this.router.navigateByUrl(route);
+    }
   }
 }

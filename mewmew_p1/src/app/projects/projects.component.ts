@@ -21,6 +21,7 @@ class CardInfo {
 
 export class ProjectsComponent implements OnInit {
   cardsInfo: CardInfo[] = [];
+  sectionIds = { projects: 'projects' };
 
   constructor(private communicationService: CommunicationService) {}
 

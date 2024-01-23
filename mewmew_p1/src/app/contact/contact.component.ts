@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.sass']
 })
 export class ContactComponent {
-
+  sectionIds = { contact: 'contact' };
 }

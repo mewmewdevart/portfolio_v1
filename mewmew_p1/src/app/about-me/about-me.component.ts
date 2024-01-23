@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.sass']
 })
 export class AboutMeComponent {
-
+   sectionIds = { about: 'about' };
 }
