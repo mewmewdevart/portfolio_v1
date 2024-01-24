@@ -1,4 +1,6 @@
-import { Component, ElementRef } from '@angular/core';
+// navbar.component.ts
+
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommunicationService } from '../communication.service';
 
@@ -7,15 +9,19 @@ import { CommunicationService } from '../communication.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.sass']
 })
-export class NavbarComponent {
-  menuItems = this.communicationService.menuItems;
-  socialIcons = this.communicationService.socialIcons;
-
+export class NavbarComponent implements OnInit {
+  menuItems: any[] = [];
+  socialIcons: any[] = [];
   sectionIds: { [key: string]: string } = {};
 
-  constructor(private router: Router, private communicationService: CommunicationService, private el: ElementRef) {
-    // Inicialize sectionIds no construtor
-    this.sectionIds = this.communicationService.sectionIds;
+  constructor(private router: Router, private communicationService: CommunicationService, private el: ElementRef) {}
+
+  ngOnInit(): void {
+    this.communicationService.getMenuItems().subscribe(data => this.menuItems = data);
+    this.communicationService.getSocialIcons().subscribe(data => this.socialIcons = data);
+
+    // Adicione o tipo explícito ou utilize 'any'
+    this.communicationService.getSectionIds().subscribe((data: any) => this.sectionIds = data);
   }
 
   navigate(route: string): void {

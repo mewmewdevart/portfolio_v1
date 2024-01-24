@@ -7,6 +7,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CommunicationService } from './communication.service';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // Material UI Imports
 import {MatIconModule} from '@angular/material/icon';
@@ -38,7 +39,8 @@ import { ContactComponent } from './contact/contact.component';
 		MatIconModule,
 		MatMenuModule,
 		MatButtonToggleModule,
-		AppRoutingModule
+		AppRoutingModule,
+		HttpClientModule,
 	],
 	providers: [CommunicationService],
 	bootstrap: [AppComponent]
