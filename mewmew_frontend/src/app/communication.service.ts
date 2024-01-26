@@ -18,7 +18,7 @@ export class CardInfo {
 	providedIn: 'root'
 })
 export class CommunicationService {
-	private apiUrl = 'https://node-api-vercel-theta-teal.vercel.app/api';
+	private apiUrl = 'https://portfolio-v1-gold.vercel.app/api';
 
 	constructor(private http: HttpClient) {}
 
