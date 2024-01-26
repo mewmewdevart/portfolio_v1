@@ -1,21 +1,24 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-//const port = 3000;
+
+// Middleware to allow JSON requests and enable CORS
+app.use(express.json());
+app.use(cors());
 
 // Rota raiz com documentação
 app.get('/', (req, res) => {
-	const documentation = {
-		message: 'Bem-vindo a API NodeJS da Mewmew',
-		routes: {
-			menu: '/api/menu',
-			sectionIds: '/api/section-ids',
-			socialIcons: '/api/social-icons',
-			cardsInfo: '/api/cards-info'
-		}
-	};
-  
-	const htmlResponse = `
+  const documentation = {
+	message: 'Bem-vindo a API NodeJS da Mewmew',
+	routes: {
+	  menu: '/api/menu',
+	  sectionIds: '/api/section-ids',
+	  socialIcons: '/api/social-icons',
+	  cardsInfo: '/api/cards-info'
+	}
+  };
+
+  const htmlResponse = `
 	<!DOCTYPE html>
 	<html lang="en">
 	  <head>
@@ -36,88 +39,89 @@ app.get('/', (req, res) => {
 	</html>
   `;
 
-  // Responda com a página HTML
+  // Respond with the HTML page
   res.send(htmlResponse);
 });
 
-// Middleware para permitir requisições com JSON
-app.use(express.json());
-app.use(cors());
+// Additional route for /api
+app.get('/api', (req, res) => {
+  res.send('API is up and running!');
+});
 
-// Rota para obter informações do menu
+// Route to get menu information
 app.get('/api/menu', (req, res) => {
-	const menuItems = [
-		{ label: 'Sobre', route: '#about', section: 'about' },
-		{ label: 'Projetos', route: '#projects', section: 'projects' },
-		{ label: 'Contato', route: '#contact', section: 'contact' }
-	];
-	res.json(menuItems);
+  const menuItems = [
+	{ label: 'Sobre', route: '#about', section: 'about' },
+	{ label: 'Projetos', route: '#projects', section: 'projects' },
+	{ label: 'Contato', route: '#contact', section: 'contact' }
+  ];
+  res.json(menuItems);
 });
 
 app.get('/api/section-ids', (req, res) => {
-	const sectionIds = {
-		about: 'about',
-		projects: 'projects',
-		contact: 'contact'
-	};
-	res.json(sectionIds);
+  const sectionIds = {
+	about: 'about',
+	projects: 'projects',
+	contact: 'contact'
+  };
+  res.json(sectionIds);
 });
 
-// Rota para obter informações dos ícones sociais
+// Route to get social icons information
 app.get('/api/social-icons', (req, res) => {
-	const socialIcons = [
-		{ name: 'Icone de acesso do Github', iconPath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/8c8e693a4671b8d8843263d2cba3831f23673a84/mewmew_frontend/src/assets/assets/images/icons/icon_github.svg', url: '#' },
-		{ name: 'Icone de acesso do Linkedin', iconPath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/8c8e693a4671b8d8843263d2cba3831f23673a84/mewmew_frontend/src/assets/assets/images/icons/icon_linkedin.svg', url: '#' }
-	];
-	res.json(socialIcons);
+  const socialIcons = [
+	{ name: 'Icone de acesso do Github', iconPath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/8c8e693a4671b8d8843263d2cba3831f23673a84/mewmew_frontend/src/assets/assets/images/icons/icon_github.svg', url: '#' },
+	{ name: 'Icone de acesso do Linkedin', iconPath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/8c8e693a4671b8d8843263d2cba3831f23673a84/mewmew_frontend/src/assets/assets/images/icons/icon_linkedin.svg', url: '#' }
+  ];
+  res.json(socialIcons);
 });
 
-// Rota para obter informações dos cards
+// Route to get cards information
 app.get('/api/cards-info', (req, res) => {
-	const cardsInfo = [
-		{
-			imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
-			titleProject: 'Card 1',
-			altTitle: 'Alternative text',
-			tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
-			liveUrl: '#',
-			codeUrl: '#'
-		},
-		{
-			imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
-			titleProject: 'Card 1',
-			altTitle: 'Alternative text',
-			tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
-			liveUrl: '#',
-			codeUrl: '#'
-		},
-		{
-			imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
-			titleProject: 'Card 1',
-			altTitle: 'Alternative text',
-			tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
-			liveUrl: '#',
-			codeUrl: '#'
-		},
-		{
-			imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
-			titleProject: 'Card 1',
-			altTitle: 'Alternative text',
-			tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
-			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
-			liveUrl: '#',
-			codeUrl: '#'
-		},
+  const cardsInfo = [
+	{
+		imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
+		titleProject: 'Card 1',
+		altTitle: 'Alternative text',
+		tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
+		liveUrl: '#',
+		codeUrl: '#'
+	  },
+	  {
+		imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
+		titleProject: 'Card 1',
+		altTitle: 'Alternative text',
+		tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
+		liveUrl: '#',
+		codeUrl: '#'
+	  }, 
+	  {
+		imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
+		titleProject: 'Card 1',
+		altTitle: 'Alternative text',
+		tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
+		liveUrl: '#',
+		codeUrl: '#'
+	  }, 
+	  {
+		imagePath: 'https://raw.githubusercontent.com/mewmewdevart/portfolio_v1/main/mewmew_frontend/src/assets/assets/images/placeholder.png',
+		titleProject: 'Card 1',
+		altTitle: 'Alternative text',
+		tagsTitle: ['Angular', 'MaterialUI', 'TypeScript'],
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nibh ac sem aliquam aliquet.',
+		liveUrl: '#',
+		codeUrl: '#'
+	  }, 
 	];
-	res.json(cardsInfo);
+  res.json(cardsInfo);
 });
 
-
-/* Inicie o servidor
-app.listen(port, () => {
-	console.log(`Servidor está rodando em http://localhost:${port}`);
+app.listen(() => {
+  console.log('API listening on a dynamically assigned PORT');
 });
-*/
+
+// Export the Express application
+module.exports = app;

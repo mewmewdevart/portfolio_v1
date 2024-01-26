@@ -11,16 +11,6 @@
 		"src": "/(.*)",
 		"dest": "index.js"
 	  }
-	],
-	"functions": {
-	  "api/*": {
-		"runtime": "@now/node",
-		"memory": 512
-	  }
-	},
-	"dependencies": {
-	  "express": "^4.18.2",
-	  "cors": "^2.8.5"
-	}
+	]
   }
   
