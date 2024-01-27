@@ -34,6 +34,9 @@ mat-toolbar
 				bottom: 22vh
 				.toolbar__socials
 					img
+						width: 32px
+						height: 32px
+						transition: transform 0.3s ease-in-out
 						&:hover
 							transform: scale(1.3)
 						&:focus
@@ -51,33 +54,27 @@ mat-toolbar
 				font-size: $fontMediumSize
 				color: $colorTertiary
 				font-weight: bold
+				cursor: pointer
 			button
 				border-radius: 0 !important
 				.toolbar__menu-text
 					font-size: $fontMediumSize
 					color: $colorTertiary
 				.cv
-					display: inline-flex
-					padding: 5px 10px
-					align-items: flex-start
 					border: 2px solid $colorMainLight
-					color: $colorMainLight
-					&:hover
-						transform: scale(1.1)
-						background-color: $colorMainLight
-						color: $colorMainBackground
-					&:focus
-						outline: 2px solid $colorMainLight
+					padding: 7px 7px
 				.toolbar__menu-number
 					color: $colorMainLight
 				&:hover
 					background-color: $colorMainLight
 					color: $colorMainBackground
+					border: none
 					.toolbar__menu-text
 						color: $colorMainBackground
 					.toolbar__menu-number
 						color: $colorSecondary
 				&:focus
+					border: none
 					outline: 2px solid $colorMainLight
 			.bigScreen__links
 				display: block

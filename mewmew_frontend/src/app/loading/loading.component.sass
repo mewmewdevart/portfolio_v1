@@ -1,0 +1,42 @@
+@import '../../styles.sass'
+
+#loading
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background-color: $colorMainBackground
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 9999 !important
+	opacity: 1
+	transition: opacity 0.3s ease-in-out 
+	.loading
+		border-radius: 50%
+		width: 75px
+		height: 75px
+		border: 0.25rem solid rgba(255, 255, 255, 0.2)
+		border-top-color: $colorMainLight
+		-webkit-animation: spin 1s infinite linear
+		animation: spin 1s infinite linear
+	img
+		position: absolute
+		width: 50px
+
+@-webkit-keyframes spin
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+
+@keyframes spin
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+
+@-webkit-keyframes pulse
+	50%
+		background: white

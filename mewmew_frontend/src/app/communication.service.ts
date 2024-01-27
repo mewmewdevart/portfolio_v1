@@ -1,17 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable,  BehaviorSubject} from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
-export class CardInfo {
-	constructor(
-		public imagePath: string,
-		public altTitle: string,
-		public badges: string[],
-		public titleProject: string,
-		public description: string,
-		public liveUrl: string,
-		public codeUrl: string
-	) {}
+export interface MenuItem {
+  name: string;
+  route: string;
+}
+
+export interface SocialItem {
+	name: string;
+	iconPath: string;
+	url: string;
+}
+
+export interface CardInfo {
+	imagePath: string;
+	altTitle: string;
+	badges: string[];
+	titleProject: string;
+	description: string;
+	liveUrl: string;
+	codeUrl: string;
 }
 
 @Injectable({
@@ -19,26 +29,41 @@ export class CardInfo {
 })
 export class CommunicationService {
 	private apiUrl = 'https://portfolio-v1-gold.vercel.app/api';
+	private isLoading = new BehaviorSubject<boolean>(false);
+  isLoading$ = this.isLoading.asObservable();
+
+	show(): void {
+		this.isLoading.next(true);
+	}
+	
+	hide(): void {
+		this.isLoading.next(false);
+	}	
 
 	constructor(private http: HttpClient) {}
 
-	getMenuItems(): Observable<any[]> {
-		return this.http.get<any[]>(`${this.apiUrl}/menu`);
-	}
+	menuItems: MenuItem[] = [
+		{ name: 'Sobre', route: 'about' },
+		{ name: 'Projetos', route: 'projects' },
+		{ name: 'Contato', route: 'contact' }
+	];	
 
-	getSocialIcons(): Observable<any[]> {
-		return this.http.get<any[]>(`${this.apiUrl}/social-icons`);
-	}
+	socialItems: SocialItem[] = [
+		{ name: 'Github', iconPath: '../../assets/assets/images/icons/icon_github.svg', url: 'https://github.com/mewmewdevart' },
+		{ name: 'Linkedin', iconPath: '../../assets/assets/images/icons/icon_linkedin.svg', url: 'https://www.linkedin.com/in/mewmewdevart/' },
+		{ name: 'Itch io', iconPath: '../../assets/assets/images/icons/icon_itch.svg', url: 'https://mewmewdevart.itch.io/' },
+		{ name: 'Behance', iconPath: '../../assets/assets/images/icons/icon_behance.svg', url: 'https://www.behance.net/MewmewDevArt' },
+		{ name: 'Fiverr', iconPath: '../../assets/assets/images/icons/icon_fiverr.svg', url: 'https://br.fiverr.com/mewmewdevart' },
+	];
 
 	getCardsInfo(): Observable<CardInfo[]> {
-		return this.http.get<CardInfo[]>(`${this.apiUrl}/cards-info`);
+		return this.http.get<CardInfo[]>(`${this.apiUrl}/cards-info`).pipe(
+			catchError((error) => {
+				console.error('Error fetching card info:', error);
+				throw error; // Rethrow the error after handling
+			})
+		);
 	}
 
-	getSectionIds(): Observable<any> {
-		return this.http.get<any>(`${this.apiUrl}/section-ids`);
-	}
 
-	getCardsInfoFromApi(): Observable<CardInfo[]> {
-		return this.http.get<CardInfo[]>(`${this.apiUrl}/cards-info`);
-	}
 }

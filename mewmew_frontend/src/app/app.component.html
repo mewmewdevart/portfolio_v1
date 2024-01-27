@@ -1,8 +1,9 @@
-<section id="mySite">
+<div *ngIf="service.isLoading$ | async">
+	<app-loading></app-loading>
+</div>
+
+<section id="mySite" *ngIf="!(service.isLoading$ | async)">
 	<app-navbar></app-navbar>
-	<app-home></app-home>
-	<app-about-me></app-about-me> 
-	<app-projects></app-projects>
-	<app-contact></app-contact>
+	<app-home-page></app-home-page>
 	<app-footer></app-footer>
 </section>

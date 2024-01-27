@@ -1,25 +1,32 @@
-/* Import Google Fonts: Fira Code */
+// Import Google Fonts: Fira Code
 @import 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap'
 
-/* Standard styles */
-/*  Fonts settings */
+// Standard styles
+// Fonts settings
 $fontStyleMain: 'Fira Code', monospace
 $fontMediumSize: 1rem
 $fontMediumStyle: 400
 $fontBigSize: 2rem
 $fontBigStyle: 500
 
-/*  Colors settings */
+// Colors settings
 $colorMainLight: rgb(194, 142, 255) // Purple
 $colorMainBackground: rgb(31, 23, 35) // Black
 $colorSecondary: rgb(255, 255, 255) // White
 $colorTertiary: rgb(215, 215, 215) // Gray
 
 body
-	font-family: $fontStyleMain
+	font-family: $fontStyleMain, sans-serif
 	background-color: $colorMainBackground
 	color: $colorSecondary
 	margin: 0
 	padding: 0
 	font-size: $fontMediumSize
 	font-weight: $fontMediumStyle
+
+::-webkit-scrollbar
+	width: 10px
+::-webkit-scrollbar-thumb
+	background-color: $colorMainLight
+::-webkit-scrollbar-track 
+	background-color: $colorTertiary

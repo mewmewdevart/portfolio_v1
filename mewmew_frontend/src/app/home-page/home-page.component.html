@@ -1,0 +1,115 @@
+<!-- ======================================== HOME ======================================== -->
+<section role="region" class="container-fluid" id="home" aria-labelledby="homeHeading" aria-live="polite">
+	<div class="container">
+		<div class="row">
+			<div class="d-flex justify-content-between home__main">
+				<div class="col col-lg-7 home__introduction">
+					<h1 id="homeHeading" class="home__title">Larissa é uma <span class="home__subtitle">Designer</span> e <span class="home__subtitle">Desenvolvedora de Software</span></h1>
+					<p class="home__description">
+						Ela cria experiências criativas, mesclando tecnologia com arte.<br>
+						Apaixonada por tecnologia, dedica-se ao desenvolvimento de aplicações web e desktop, utilizando recursos modernos e amigáveis para o usuário. <br>
+					</p>
+					<button class="home__button" aria-label="Contate Larissa" role="button">Entre em contato</button>
+				</div>
+				<div class="col col-lg-4 home__bar">
+					<p class="home__bar-description">
+						<svg fill="#c28eff" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#c28eff" stroke-width="0.8" aria-hidden="true" class="card-right__icon">
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+							<g id="SVGRepo_iconCarrier">
+								<path d="M 6 6 L 6 26 L 26 26 L 26 6 L 6 6 z"></path>
+							</g>
+						</svg>
+						<span class="home__bar-subtitle">Atualmente procurando por </span>
+						<span class="home__bar-letter">&#160; Dev. Jobs</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ======================================== ABOUT ME ======================================== -->
+<section role="region" class="container-fluid" id="about" aria-labelledby="aboutHeading" aria-live="polite">
+	<div class="container">
+		<div class="row">
+			<div class="d-flex flex-column flex-lg-row about__content">
+				<div class="col-lg-8 col-md-12 order-lg-1 order-2 about__info">
+					<h1 id="aboutHeading" class="about__title"><span> 01. </span>Sobre Mim <div class="line"></div></h1>
+					<p class="about__description">
+						Olá, eu sou a Larissa, também conhecida como Mewmew! <br><br>
+						Sou uma Desenvolvedora de Experiências, também chamada de Dev de Software autodidata baseada em São Paulo, Brasil. Consigo desenvolver experiências do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para o usuário. <br><br>
+						Meu foco é na qualidade durante todo o processo de desenvolvimento de uma nova aplicação. Utilizo bons métodos de código limpo, testes unitários e afins para tornar os projetos o mais acessíveis possível. Costumo dizer que estou sempre em desenvolvimento.
+					</p>
+					<button class="about__button" aria-label="Contate Larissa" role="button">Saiba mais</button>
+				</div>
+				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image" >
+					<img src="../../assets/assets/images/image.png" alt="Foto da Larissa: Mulher negra de cabelo cacheado" width="300" height="400">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ======================================== PROJECTS ======================================== -->
+<section role="region" class="container-fluid" id="projects" aria-labelledby="projectsHeading">
+	<div class="container">
+	  <div class="row flex-wrap">
+		<h2 id="projectsHeading" class="about__title"><span> 02. </span>Projetos <div class="line"></div></h2>
+  
+		<div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo">
+			<div class="card custom-card rounded-0">
+			  <img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" width="300" height="200">
+			  <div class="card-badges">
+				<span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
+			  </div>
+			  <div class="card-body">
+				<h3 class="card-title">{{ card.titleProject }}</h3>
+				<p class="card-text">{{ card.description }}</p>
+				<div class="container-btns">
+				  <a [href]="card.liveUrl" target="_blank" class="btn btn-primary">
+					<div class="btn-content">
+					  Ver
+					  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+						<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
+					  </svg>
+					</div>
+				  </a>
+				  <a [href]="card.codeUrl" target="_blank" class="btn btn-primary">
+					<div class="btn-content">
+					  Código
+					  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+						<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
+					  </svg>
+					</div>
+				  </a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<button class="projects__button" aria-label="Saiba mais sobre os projetos">Veja mais projetos</button>
+	  </div>
+	</div>
+</section>
+
+<!-- ======================================== CONTATO ======================================== -->
+<div role="region" class="container-fluid" id="contact" aria-labelledby="contactHeading">
+	<div class="container contact__info">
+		<div class="row contact">
+			<div class="col-md-12">
+				<h1 id="contactHeading" class="contact_title">
+					<span> 03. </span>
+					Contact 
+					<div class="line"></div>
+				</h1>
+				<p class="contact__description">
+					Atualmente, estou em busca de oportunidades de desenvolvimento, e minha caixa de entrada está sempre aberta. Se você tiver alguma dúvida, oferta de trabalho ou só quiser dizer oi, farei o possível para responder!
+				</p>
+			</div>
+			<div class="col-12 buttons">
+				<button class="contact__button" aria-label="Enviar email">Enviar email</button>
+				<button class="contact__button" aria-label="Ver o currículo">Ver o currículo</button>
+			</div>
+		</div>
+	</div>
+</div>
