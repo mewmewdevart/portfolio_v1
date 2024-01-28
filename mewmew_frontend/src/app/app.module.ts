@@ -10,6 +10,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CommunicationService } from './communication.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { Router, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // Material UI Imports
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +21,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { LoadingComponent } from './loading/loading.component';
+import { ProjectsPageComponent } from './projects-page/projects-page.component';
+import { CategoryFilterPipe } from './projects-page/category-filter.pipe';
+import { ResponseComponent } from './response/response.component';
 
 @NgModule({
 	declarations: [
@@ -26,8 +31,11 @@ import { LoadingComponent } from './loading/loading.component';
 		NavbarComponent,
 		FooterComponent,
   		HomePageComponent,
-    LoadingComponent
-	],
+		LoadingComponent,
+		ProjectsPageComponent,
+		CategoryFilterPipe,
+  ResponseComponent,
+],
 	imports: [
 		BrowserModule,
 		NoopAnimationsModule,
@@ -38,7 +46,9 @@ import { LoadingComponent } from './loading/loading.component';
 		MatButtonToggleModule,
 		AppRoutingModule,
 		HttpClientModule,
-		MatTooltipModule
+		MatTooltipModule,
+		RouterModule,
+		FormsModule
 	],
 	providers: [CommunicationService],
 	bootstrap: [AppComponent]

@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+
+<!-- ======================================== PROJECTS ======================================== -->
+<section role="region" class="container-fluid" id="projects" aria-labelledby="projectsHeading">
+	<div class="container">
+		<div class="row flex-wrap">
+			<h2 id="projectsHeading" class="about__title"><span> 02. </span>Projetos <div class="line"></div></h2>
+			<div class="filter-container">
+				<button
+				  class="btn filter-button"
+				  [class.active]="selectedCategory === 'TODOS'"
+				  (click)="updateCategory('TODOS')"
+				>
+				  Todos
+				</button>
+				<button
+				  class="btn filter-button"
+				  [class.active]="selectedCategory === 'frontend'"
+				  (click)="updateCategory('frontend')"
+				>
+				  Frontend
+				</button>
+				<button
+				  class="btn filter-button"
+				  [class.active]="selectedCategory === 'backend'"
+				  (click)="updateCategory('backend')"
+				>
+				  Backend
+				</button>
+				<button
+				  class="btn filter-button"
+				  [class.active]="selectedCategory === 'games'"
+				  (click)="updateCategory('games')"
+				>
+				  Games
+				</button>
+				<button
+				class="btn filter-button"
+				[class.active]="selectedCategory === 'opensource'"
+				(click)="updateCategory('opensource')"
+			  >
+				Open Source
+			  </button>
+			  </div>
+
+			  <div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo | categoryFilter:selectedCategory">
+				<div class="card custom-card rounded-0" [class]="card.category">
+					<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" width="300px" height="150px">
+					<div class="card-badges">
+						<span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title">{{ card.titleProject }}</h3>
+						<p class="card-text">{{ card.description }}</p>
+						<div class="container-btns">
+							<a [href]="card.liveUrl" target="_blank" class="btn btn-primary">
+								<div class="btn-content">
+									Ver
+									<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+										<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
+									</svg>
+								</div>
+							</a>
+							<a [href]="card.codeUrl" target="_blank" class="btn btn-primary">
+								<div class="btn-content">
+									Código
+									<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+										<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
+									</svg>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<app-footer></app-footer>

@@ -3,7 +3,5 @@
 </div>
 
 <section id="mySite" *ngIf="!(service.isLoading$ | async)">
-	<app-navbar></app-navbar>
-	<app-home-page></app-home-page>
-	<app-footer></app-footer>
+	<router-outlet></router-outlet> 
 </section>

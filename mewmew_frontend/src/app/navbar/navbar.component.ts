@@ -23,12 +23,17 @@ export class NavbarComponent implements OnInit {
 		this.socialIcons = this.communicationService.socialItems;
 	}
 
-	navigate(sectionId: string): void {
-		const element = document.getElementById(sectionId);
-	
-		if (element) {
+	reloadInRoot(): void {
+		window.location.href = '/';
+	  }
+
+	navigate(route: string): void {
+		  const element = document.getElementById(route);
+	  
+		  if (element) {
 			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
-	}
+		  }
+	  }
+	  
 	
 }

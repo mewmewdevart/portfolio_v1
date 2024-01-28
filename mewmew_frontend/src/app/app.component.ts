@@ -17,6 +17,6 @@ export class AppComponent implements OnInit {
 
 		setTimeout(() => {
 			this.service.hide();
-		}, 3000);
+		}, 3000); 
 	}
 }

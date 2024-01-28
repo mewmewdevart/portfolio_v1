@@ -16,19 +16,22 @@ export interface SocialItem {
 
 export interface CardInfo {
 	imagePath: string;
+	category: string;
+	favorite: boolean;
+	titleProject: string;
 	altTitle: string;
 	badges: string[];
-	titleProject: string;
 	description: string;
 	liveUrl: string;
 	codeUrl: string;
 }
 
+
 @Injectable({
 	providedIn: 'root'
 })
 export class CommunicationService {
-	private apiUrl = 'https://portfolio-v1-gold.vercel.app/api';
+	private apiUrl = 'https://mewmewdev-backend.vercel.app/api';
 	private isLoading = new BehaviorSubject<boolean>(false);
   isLoading$ = this.isLoading.asObservable();
 
@@ -60,10 +63,8 @@ export class CommunicationService {
 		return this.http.get<CardInfo[]>(`${this.apiUrl}/cards-info`).pipe(
 			catchError((error) => {
 				console.error('Error fetching card info:', error);
-				throw error; // Rethrow the error after handling
+				throw error;
 			})
 		);
 	}
-
-
 }

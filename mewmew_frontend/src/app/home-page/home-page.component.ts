@@ -17,15 +17,27 @@ export class HomePageComponent implements OnInit {
     this.menuItems = this.communicationService.menuItems;
 
     this.communicationService.getCardsInfo().subscribe(
-			(data: CardInfo[]) => {
-				console.log('Dados dos cards:', data);
-				this.cardsInfo = data;
-			},
-			(error) => {
-				console.error('Erro ao obter dados dos cards:', error);
-			}
-		);
+      (data: CardInfo[]) => {
+        console.log('Dados dos cards:', data);
+        this.cardsInfo = data;
+      },
+      (error) => {
+        console.error('Erro ao obter dados dos cards:', error);
+      }
+    );
   }
 
   sectionIds = { about: 'about', projects: 'projects', contact: 'contact'};
+
+  navigate(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  navigateToProjects(): void {
+    window.location.href = 'more-projects';
+  }
 }
