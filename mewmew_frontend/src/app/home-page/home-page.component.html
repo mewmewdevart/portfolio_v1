@@ -6,12 +6,13 @@
 		<div class="row">
 			<div class="d-flex justify-content-between home__main">
 				<div class="col col-lg-7 home__introduction">
-					<h1 id="homeHeading" class="home__title">Larissa é uma <span class="home__subtitle">Designer</span> e <span class="home__subtitle">Desenvolvedora de Software</span></h1>
+					<h1 id="homeHeading" class="home__title">Larissa é<span class="home__subtitle"> Desenvolvedora de Software</span> e <span class="home__subtitle">Designer</span></h1>
 					<p class="home__description">
-						Ela cria experiências criativas, mesclando tecnologia com arte.<br>
-						Apaixonada por tecnologia, dedica-se ao desenvolvimento de aplicações web e desktop, utilizando recursos modernos e amigáveis para o usuário. <br>
+						Ela cria experiências, mesclando a tecnologia com o design.<br>
+						Apaixonada pelas pessoas e pelo mundo tecnológico, dedica-se ao desenvolvimento de aplicações que cativem o usuário. <br>
 					</p>
-					<button class="home__button" aria-label="Contate Larissa" role="button">Entre em contato</button>
+					<button class="home__button" (click)="navigate('contact')" aria-label="Contate Larissa" role="button">Entre em contato</button>
+
 				</div>
 				<div class="col col-lg-4 home__bar">
 					<p class="home__bar-description">
@@ -22,8 +23,8 @@
 								<path d="M 6 6 L 6 26 L 26 26 L 26 6 L 6 6 z"></path>
 							</g>
 						</svg>
-						<span class="home__bar-subtitle">Atualmente procurando por </span>
-						<span class="home__bar-letter">&#160; Dev. Jobs</span>
+						<span class="home__bar-subtitle">Atualmente, estudando </span>
+						<span class="home__bar-letter">&#160; TI </span>
 					</p>
 				</div>
 			</div>
@@ -39,11 +40,16 @@
 				<div class="col-lg-8 col-md-12 order-lg-1 order-2 about__info">
 					<h1 id="aboutHeading" class="about__title"><span> 01. </span>Sobre Mim <div class="line"></div></h1>
 					<p class="about__description">
-						Olá, eu sou a Larissa, também conhecida como Mewmew! <br><br>
-						Sou uma Desenvolvedora de Experiências, também chamada de Dev de Software autodidata baseada em São Paulo, Brasil. Consigo desenvolver experiências do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para o usuário. <br><br>
-						Meu foco é na qualidade durante todo o processo de desenvolvimento de uma nova aplicação. Utilizo bons métodos de código limpo, testes unitários e afins para tornar os projetos o mais acessíveis possível. Costumo dizer que estou sempre em desenvolvimento.
+						Olá, eu sou a Larissa, também conhecida como Mewmew/Larcrist! <br><br>
+						Sou uma pessoa criativa, empática, com um toque non-sense e apaixonada por desenvolver experiências digitais. Desenvolvo projetos do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para os usuários. <br><br>
+						<a href="https://br.fiverr.com/mewmewdevart" target="_blank" aria-label="Freelancer em PixelArt">
+							<span>Freelancer em PixelArt</span>
+						</a> nas horas vagas, fundadora do projeto 
+						<a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario">
+							<span>DevSolidario</span>
+						</a>  e participante ativa de comunidades Open-Source. <br> Meu foco é na qualidade de código, aplicando boas práticas de arquitetura de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender sobre outras areas da tecnologia.
 					</p>
-					<button class="about__button" aria-label="Contate Larissa" role="button">Saiba mais</button>
+					<button class="about__button" aria-label="Contate Larissa" role="button" (click)="navigateToAbout()">Saiba mais</button>
 				</div>
 				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image" >
 					<img src="../../assets/assets/images/image.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado">
@@ -111,8 +117,8 @@
 				</p>
 			</div>
 			<div class="col-12 buttons">
-				<button class="contact__button" aria-label="Enviar email">Enviar email</button>
-				<button class="contact__button" aria-label="Ver o currículo">Ver o currículo</button>
+				<a href="mailto:mewmewdevart@gmail.com" class="contact__button" role="button" aria-label="Enviar email">Enviar email</a>
+				<a href="https://drive.google.com/drive/folders/1z4r5m8AN2afei71LQ4TQ8lVcCBUqBjN6?usp=sharing" target="_blank" class="contact__button" role="button" aria-label="Ver o currículo">Ver o currículo</a>
 			</div>
 		</div>
 	</div>

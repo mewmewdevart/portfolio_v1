@@ -24,6 +24,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { CategoryFilterPipe } from './projects-page/category-filter.pipe';
 import { ResponseComponent } from './response/response.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
 	declarations: [
@@ -35,6 +36,7 @@ import { ResponseComponent } from './response/response.component';
 		ProjectsPageComponent,
 		CategoryFilterPipe,
   ResponseComponent,
+  AboutPageComponent,
 ],
 	imports: [
 		BrowserModule,

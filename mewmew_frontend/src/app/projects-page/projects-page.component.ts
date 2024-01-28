@@ -19,7 +19,7 @@ export class ProjectsPageComponent {
 
   constructor(
     private communicationService: CommunicationService,
-    private router: Router,  // Adicione o Router aqui
+    private router: Router,
   ) {}
 
   ngOnInit(): void {

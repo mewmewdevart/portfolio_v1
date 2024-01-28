@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommunicationService, MenuItem, SocialItem } from '../communication.service';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-navbar',
@@ -15,8 +15,10 @@ export class NavbarComponent implements OnInit {
 	constructor(
 		private router: Router,
 		private communicationService: CommunicationService,
-		private el: ElementRef
-	) {}
+		private el: ElementRef,
+		private route: ActivatedRoute
+	  ) {}
+	  
 
 	ngOnInit(): void {
 		this.menuItems = this.communicationService.menuItems;
@@ -27,13 +29,22 @@ export class NavbarComponent implements OnInit {
 		window.location.href = '/';
 	  }
 
-	navigate(route: string): void {
+	  navigate(route: string): void {
+		const isProjectsPage = this.route.snapshot.routeConfig?.path === 'more-projects';
+		const isAboutPage = this.route.snapshot.routeConfig?.path === 'about-me';
+	  
+		if (isProjectsPage) {
+		  this.router.navigate([''], { fragment: route });
+		} else if (isAboutPage) {
+			this.router.navigate([''], { fragment: route });
+		} else {
 		  const element = document.getElementById(route);
 	  
 		  if (element) {
 			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		  }
-	  }
+		}
+	  }	  
 	  
 	
 }
