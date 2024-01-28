@@ -2,11 +2,18 @@
 
 footer
 	background-color: $colorMainBackground
-	padding: 2% 0
 	.container
+		max-width: 88.6% !important
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 4%
+		padding-left: 15px
+		flex-direction: row
 		.footer__content-main
 			display: flex
-			justify-content: flex-start
+			flex-direction: row
+			align-items: flex-start
 			color: $colorSecondary
 			gap: 10px
 			svg
@@ -15,3 +22,21 @@ footer
 				color: $colorMainLight
 		.footer__copyright, .footer__subtitle
 			color: $colorTertiary
+		.footer__lineSocials
+			display: none
+			gap: 10px
+			.footer__socials
+				img
+					width: 32px
+					height: 32px
+					transition: transform 0.3s ease-in-out
+				&:hover
+					transform: scale(1.3)
+				&:focus
+					outline: 2px solid $colorMainLight
+
+@media screen and (max-width: 900px)
+	footer
+		.container
+			.footer__lineSocials
+				display: flex

@@ -1,13 +1,24 @@
 <footer class="footer">
 	<div class="container">
-		<div class="footer__content-main">
-			<svg width="32" height="32" viewBox="0 0 100 100" class="footer__logo">
-				<image href="../../assets/assets/images/icons/logo.svg" width="100" height="100"/>
-			</svg>
-			MewmewDev
-			<a href="mailto:Mewmewdevart&#64;gmail.com" class="footer__email">Mewmewdevart&#64;gmail.com</a>
+		<div class="row">
+			<div class="footer-main">
+				<div class="footer__content-main">
+					<svg width="32" height="32" viewBox="0 0 100 100" class="footer__logo">
+						<image href="../../assets/assets/images/icons/logo.svg" width="100" height="100"/>MewmewDev
+					</svg> MewmewDev
+					<a href="mailto:Mewmewdevart&#64;gmail.com" class="footer__email">Mewmewdevart&#64;gmail.com</a>
+				</div>
+				<p class="footer__subtitle">Desenvolvedora de Software e Designer</p>
+			</div>
+	
+			<div class="footer__lineSocials">
+				<a *ngFor="let item of socialIcons" target="_blank" [href]="item.url" class="footer__socials" matTooltip="{{item.name}}" matTooltipPosition="right">
+					<span [attr.aria-label]="item.name">
+						<img [src]="item.iconPath" alt="{{item.name}}" class="footer__socials-icon">
+					</span>
+				</a>	
+			</div>
 		</div>
-		<p class="footer__subtitle">Desenvolvedora e Designer</p>
-		<p class="text-center footer__copyright">© MewmewDev {{ currentYear }} </p>
 	</div>
+	<p class="text-center footer__copyright">© MewmewDev {{ currentYear }} </p>
 </footer>

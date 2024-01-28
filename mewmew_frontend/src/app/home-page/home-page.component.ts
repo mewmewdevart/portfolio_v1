@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
 	selector: 'app-home-page',
 	templateUrl: './home-page.component.html',
-	styleUrls: ['./home-page.component.sass']
+	styleUrls: ['./home-page.component.sass', './home-page2.component.sass']
 })
 export class HomePageComponent implements OnInit {
 	menuItems: MenuItem[] = [];
