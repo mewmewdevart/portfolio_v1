@@ -34,20 +34,23 @@ button
 					height: 2px
 					background-color: $colorMainLight
 					margin: 18px 25px
-			.about__description
+			.about__description, h2, ul
 				width: 90%
 				color: $colorTertiary
 				font-size: 16px
 				font-style: normal
 				font-weight: 400
 				line-height: 26px
+			h2
+				color: $colorMainLight
+				font-weight: 500
 			button
 				display: inline-flex
 				padding: 12px 16px
 				align-items: flex-start
 				gap: 10px
 				border: 2px solid $colorMainLight
-				color: $colorSecondary
+				color: $colorTertiary
 				font-weight: 500
 				margin-bottom: 2%
 				&:hover
@@ -56,6 +59,8 @@ button
 					color: $colorMainBackground
 				&:focus
 					outline: 2px solid $colorMainLight
+		span
+			color: $colorMainLight
 		.about__image
 			display: flex
 			align-items: baseline
@@ -63,12 +68,15 @@ button
 				width: 100%
 
 .about__additional-info
+	color: $colorTertiary
 	background-color: $colorMainBackground
 	span
 		color: $colorMainLight
 
 @media screen and (max-width: 1000px)
 	#about
-		.container-fluid
-			.line
-				display: none
+		.container
+			.about__info
+				.about__title
+					.line
+						display: none !important

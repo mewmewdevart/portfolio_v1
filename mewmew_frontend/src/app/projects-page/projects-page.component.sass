@@ -1,5 +1,18 @@
 @import '../../styles.sass'
 
+// GLOBAL SETTINGS
+.container
+	max-width: 89.6% !important
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 5%
+	padding-left: 15px
+
+button
+	background-color: $colorMainBackground
+
+
 // =============================== PROJECTS =============================== 
 #projects
 	width: 100%
@@ -8,11 +21,6 @@
 	flex-direction: column
 	align-items: center
 	.container
-		max-width: 89.6% !important
-		display: flex
-		justify-content: space-between
-		align-items: center
-		padding: 2% 0
 		.about__title
 			display: flex
 			font-size: 32px
@@ -26,11 +34,18 @@
 				background-color: $colorMainLight
 				margin: 18px 25px
 		.card-badges
+			display: flex
 			border-bottom: 2px solid $colorTertiary
+			border-top: 2px solid $colorTertiary
+			gap: 3px
+			.badge
+				background-color: $colorMainLight
+				border-radius: 0
 		.custom-card
 			border-style: none
 			border: 2px solid $colorTertiary
 			background-color: $colorMainBackground
+			margin-bottom: 3%
 			.card-body
 				background-color: none
 				.card-title
@@ -134,3 +149,7 @@
 .btn.active
 	background-color: $colorMainLight
 	color: $colorMainBackground
+
+.disabled-button
+	opacity: 0.8 !important
+	pointer-events: none

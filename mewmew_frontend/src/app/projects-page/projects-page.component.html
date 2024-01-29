@@ -41,35 +41,42 @@
 			  >
 				Open Source
 			  </button>
+			  <button
+				class="btn filter-button"
+				[class.active]="selectedCategory === 'algorithm'"
+				(click)="updateCategory('algorithm')"
+			  >
+				Algoritmos & Lógica
+			  </button>
 			  </div>
 
 			  <div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo | categoryFilter:selectedCategory">
 				<div class="card custom-card rounded-0" [class]="card.category">
-					<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" width="300px" height="150px">
+					<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: 225px;">
 					<div class="card-badges">
-						<span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
+						<span class="badge" *ngFor="let tag of card.badges">{{ tag }}</span>
 					</div>
 					<div class="card-body">
 						<h3 class="card-title">{{ card.titleProject }}</h3>
 						<p class="card-text">{{ card.description }}</p>
 						<div class="container-btns">
-							<a [href]="card.liveUrl" target="_blank" class="btn btn-primary">
-								<div class="btn-content">
-									Ver
-									<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-										<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
-									</svg>
-								</div>
+							<a [href]="card.liveUrl === '#' ? null : card.liveUrl" target="_blank" class="btn btn-primary" [class.disabled-button]="card.liveUrl === '#'">
+							  <div class="btn-content">
+								Ver
+								<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+								  <image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
+								</svg>
+							  </div>
 							</a>
-							<a [href]="card.codeUrl" target="_blank" class="btn btn-primary">
-								<div class="btn-content">
-									Código
-									<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-										<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
-									</svg>
-								</div>
+							<a [href]="card.codeUrl === '#' ? null : card.codeUrl" target="_blank" class="btn btn-primary" [class.disabled-button]="card.codeUrl === '#'">
+							  <div class="btn-content">
+								Fonte
+								<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+								  <image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
+								</svg>
+							  </div>
 							</a>
-						</div>
+						  </div>						  
 					</div>
 				</div>
 			</div>

@@ -48,7 +48,17 @@
 						<a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario">
 							<span>DevSolidario</span>
 						</a>  e participante ativa de comunidades Open-Source. <br> Meu foco é na qualidade de código, aplicando boas práticas de arquitetura de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender sobre outras areas da tecnologia.
+						<br><br>
 					</p>
+					<h2>Desenvolvedora de Software com habilidades diversas/</h2>
+					<ul>
+						<li><span>Programação</span>: FrontEnd (SASS/SCSS, Angular[Material UI e PO-UI]/React/Bootstrap), BackEnd (C [Ponteiros, alocação de memória, structs, entrada/saída etc.], automação com Shell Script e conceitos básicos em Python/Java).</li>
+						<li><span>Qualidade</span>: Acessibilidade WCAG, Clean Code, Test-Driven Development (TDD). <div class="showLI">// Clique no botão para continuar a leitura ↓</div></li>
+						<li class="showLi-group"><span>Softwares e Plataformas </span>: Git (pull, commit, branching, merging, rebase), Docker, conceitos de Amazon Web Services (AWS), Figma (Prototipação de interfaces), Adobe (Photoshop, Illustrator e After Effects).</li>
+						<li class="showLi-group"><span>Metodologias e organização </span>: Scrum e Kanban, GSUIT, Slack, Microsoft Teams, Discord.</li>
+						<li class="showLi-group"><span>Sistemas operacionais </span>: Linux (Administração de redes e configuração de sistemas), Windows +7 (Prompt, gerenciamento de discos e controle de usuários).</li>
+						<li class="showLi-group"><span>Idiomas</span>: Português Brasileiro (Nativo), Inglês (Intermediário), Francês (Básico), Libras (Intermediário).</li>
+					</ul>
 					<button class="about__button" aria-label="Contate Larissa" role="button" (click)="navigateToAbout()">Saiba mais</button>
 				</div>
 				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image" >
@@ -67,7 +77,7 @@
   
 		<div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo">
 			<div *ngIf="card.favorite" class="card custom-card rounded-0">
-			<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: 200px; object-fit: cover;">
+			<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: 250px;">
 			  <div class="card-badges">
 				<span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
 			  </div>
@@ -96,7 +106,11 @@
 			</div>
 			<!-- End ngIf -->
 		  </div>
-		  <button class="projects__button" aria-label="Saiba mais sobre os projetos" (click)="navigateToProjects()">Veja mais projetos</button>
+		  <div class="col-12 text-center">
+			<button class="projects__button mx-auto btn btn-primary btn-lg btn-block col-md-3" aria-label="Saiba mais sobre os projetos" (click)="navigateToProjects()">
+			  Veja mais projetos
+			</button>
+		  </div>
 	  </div>
 	</div>
 </section>
