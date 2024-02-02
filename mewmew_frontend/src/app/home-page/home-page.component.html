@@ -1,3 +1,5 @@
+<a href="#about" class="jumpNavigation" rel="preload">Pular para conteúdo principal</a>
+
 <app-navbar></app-navbar>
 
 <!-- ======================================== HOME ======================================== -->
@@ -5,16 +7,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="d-flex justify-content-between home__main">
-				<div class="col col-lg-7 home__introduction">
+				<div class="col col-lg-6 home__introduction">
 					<h1 id="homeHeading" class="home__title">Larissa é<span class="home__subtitle"> Desenvolvedora de Software</span> e <span class="home__subtitle">Designer</span></h1>
 					<p class="home__description">
 						Ela cria experiências, mesclando a tecnologia com o design.<br>
 						Apaixonada pelas pessoas e pelo mundo tecnológico, dedica-se ao desenvolvimento de aplicações que cativem o usuário. <br>
 					</p>
 					<button class="home__button" (click)="navigate('contact')" aria-label="Contate Larissa" role="button">Entre em contato</button>
-
 				</div>
-				<div class="col col-lg-4 home__bar">
+				<div class="col col-lg-3 home__bar">
 					<p class="home__bar-description">
 						<svg fill="#c28eff" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#c28eff" stroke-width="0.8" aria-hidden="true" class="card-right__icon">
 							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -32,6 +33,7 @@
 	</div>
 </section>
 
+
 <!-- ======================================== ABOUT ME ======================================== -->
 <section role="region" class="container-fluid" id="about" aria-labelledby="aboutHeading" aria-live="polite">
 	<div class="container">
@@ -40,15 +42,10 @@
 				<div class="col-lg-8 col-md-12 order-lg-1 order-2 about__info">
 					<h1 id="aboutHeading" class="about__title"><span> 01. </span>Sobre Mim <div class="line"></div></h1>
 					<p class="about__description">
-						Olá, eu sou a Larissa, também conhecida como Mewmew/Larcrist! <br><br>
-						Sou uma pessoa criativa, empática, com um toque non-sense e apaixonada por desenvolver experiências digitais. Desenvolvo projetos do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para os usuários. <br><br>
-						<a href="https://br.fiverr.com/mewmewdevart" target="_blank" aria-label="Freelancer em PixelArt">
-							<span>Freelancer em PixelArt</span>
-						</a> nas horas vagas, fundadora do projeto 
-						<a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario">
-							<span>DevSolidario</span>
-						</a>  e participante ativa de comunidades Open-Source. <br> Meu foco é na qualidade de código, aplicando boas práticas de arquitetura de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender sobre outras areas da tecnologia.
-						<br><br>
+						Olá, eu sou a Larissa, também conhecida como Mewmew/Larcrist! <br> <br>
+						Sou uma pessoa criativa, empática, com um toque non-sense e apaixonada por desenvolver experiências digitais. Desenvolvo projetos do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para os usuários.  <br> <br>
+						Sou <a href="https://br.fiverr.com/mewmewdevart" target="_blank" aria-label="Freelancer em PixelArt"><span>Freelancer em ilustrações em Pixel Art</span> </a> ,fundadora do projeto <a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario"><span>DevSolidário</span></a>  e participante ativa de comunidades de código aberto. Meu foco é na qualidade de código, aplicando boas práticas de arquitetura e metodologias de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender outras áreas de tecnologia.
+						
 					</p>
 					<h2>Desenvolvedora de Software com habilidades diversas/</h2>
 					<ul>
@@ -62,7 +59,7 @@
 					<button class="about__button" aria-label="Contate Larissa" role="button" (click)="navigateToAbout()">Saiba mais</button>
 				</div>
 				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image" >
-					<img src="../../assets/assets/images/image.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado">
+					<img src="../../assets/assets/images/image.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado" loading="lazy" width="100%" height="auto" rel="preload">
 				</div>
 			</div>
 		</div>
@@ -75,21 +72,21 @@
 	  <div class="row flex-wrap">
 		<h2 id="projectsHeading" class="about__title"><span> 02. </span>Projetos <div class="line"></div></h2>
   
-		<div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo">
+		<div class="col-sm-6 col-md-6 col-lg-3 custom-size" *ngFor="let card of cardsInfo">
 			<div *ngIf="card.favorite" class="card custom-card rounded-0">
-			<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: 250px;">
+			<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: auto;">
 			  <div class="card-badges">
 				<span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
 			  </div>
 			  <div class="card-body">
 				<h3 class="card-title">{{ card.titleProject }}</h3>
 				<p class="card-text">{{ card.description }}</p>
-				<div class="container-btns">
-				  <a [href]="card.liveUrl" target="_blank" class="btn btn-primary">
+				<div class="container-btns ">
+					<a [href]="card.liveUrl === '#' ? null : card.liveUrl" target="_blank" class="btn btn-primary" [class.disabled-button]="card.liveUrl === '#'">
 					<div class="btn-content">
 					  Ver
 					  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-						<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
+						<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100" loading="eager"/>
 					  </svg>
 					</div>
 				  </a>
@@ -97,14 +94,13 @@
 					<div class="btn-content">
 					  Código
 					  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-						<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
+						<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100" loading="eager"/>
 					  </svg>
 					</div>
 				  </a>
 				</div>
 			  </div>
 			</div>
-			<!-- End ngIf -->
 		  </div>
 		  <div class="col-12 text-center">
 			<button class="projects__button mx-auto btn btn-primary btn-lg btn-block col-md-3" aria-label="Saiba mais sobre os projetos" (click)="navigateToProjects()">
@@ -115,9 +111,8 @@
 	</div>
 </section>
 
-
 <!-- ======================================== CONTATO ======================================== -->
-<div role="region" class="container-fluid" id="contact" aria-labelledby="contactHeading">
+<section role="region" class="container-fluid" id="contact" aria-labelledby="contactHeading">
 	<div class="container contact__info">
 		<div class="row contact">
 			<div class="col-md-12">
@@ -136,6 +131,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
+
 
 <app-footer></app-footer>

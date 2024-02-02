@@ -6,7 +6,7 @@
 				<div class="toolbar__lineSocials">
 					<a *ngFor="let item of socialIcons" target="_blank" [href]="item.url" class="toolbar__socials" matTooltip="{{item.name}}" matTooltipPosition="right">
 						<span [attr.aria-label]="item.name">
-							<img [src]="item.iconPath" alt="{{item.name}}" class="toolbar__socials-icon">
+							<img [src]="item.iconPath" alt="{{item.name}}" class="toolbar__socials-icon" [attr.aria-label]="item.name" loading="eager">
 						</span>
 					</a>	
 				</div>
@@ -16,14 +16,16 @@
 		<!-- Logo and Navigation Section -->
 		<div class="toolbar__content">
 			<!-- Logo Section -->
-			<div class="toolbar__logo-section" (click)="reloadInRoot()">
-				<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo" aria-hidden="true" aria-label="MewmewDev Logo">
-				   <image href="../../assets/assets/images/icons/logo.svg" width="100" height="100"/>
-				</svg>
-				MewmewDev
-			 </div>
+			<link rel="preload" href="../../assets/assets/images/icons/logo.svg" as="image">
 
-			<span class="toolbar__spacer menu-spacer" aria-hidden="true"></span>
+			<div class="toolbar__logo-section" (click)="reloadInRoot()" aria-label="Seção do Logotipo da MewmewDev">
+				<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo" aria-hidden="true" aria-label="MewmewDev Logo">
+					<image href="../../assets/assets/images/icons/logo.svg" width="100" height="100" alt="Logo MewmewDev" loading="lazy"/>
+				 </svg>
+				MewmewDev
+			</div>
+
+			<span class="toolbar__spacer menu-spacer"></span>
 
 			<!-- Navigation Links Section-->
 			<div class="toolbar__links-section" role="navigation">
@@ -45,10 +47,10 @@
 
 				<!-- Small Screen Links -->
 				<div class="smallScreen__links">
-					<button mat-button [matMenuTriggerFor]="menu">
-					  <mat-icon>format_align_right</mat-icon>
-					  <span class="sr-only">Menu</span>
-					</button>                    
+					<button mat-button [matMenuTriggerFor]="menu" aria-haspopup="true" aria-label="Abrir Menu">
+						<mat-icon>format_align_right</mat-icon>
+						<span class="sr-only">Menu</span>
+					</button>                
 					<mat-menu #menu="matMenu">
 					  <button *ngFor="let item of menuItems" mat-menu-item (click)="navigate(item.route)" class="toolbar__button" [attr.aria-label]="item.name">
 						<span class="toolbar__menu-number">{{menuItems.indexOf(item) + 1 | number:'2.0-0'}}.</span>

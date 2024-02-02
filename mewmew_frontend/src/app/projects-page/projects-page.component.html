@@ -1,82 +1,88 @@
 <app-navbar></app-navbar>
 
 <!-- ======================================== PROJECTS ======================================== -->
-<section role="region" class="container-fluid" id="projects" aria-labelledby="projectsHeading">
+<section role="region" aria-labelledby="projectsHeading" aria-live="polite" class="container-fluid" id="projects" tabindex="0">
 	<div class="container">
 		<div class="row flex-wrap">
-			<h2 id="projectsHeading" class="about__title"><span> 02. </span>Projetos <div class="line"></div></h2>
+			<h2 id="projectsHeading" class="about__title" role="heading" aria-level="2"><span> 02. </span>Projetos <div class="line"></div></h2>
 			<div class="filter-container">
 				<button
-				  class="btn filter-button"
-				  [class.active]="selectedCategory === 'TODOS'"
-				  (click)="updateCategory('TODOS')"
+					class="btn filter-button"
+					[class.active]="selectedCategory === 'TODOS'"
+					(click)="updateCategory('TODOS')"
+					aria-label="Filtrar por todos os projetos"
 				>
-				  Todos
+					Todos
 				</button>
 				<button
-				  class="btn filter-button"
-				  [class.active]="selectedCategory === 'frontend'"
-				  (click)="updateCategory('frontend')"
+					class="btn filter-button"
+					[class.active]="selectedCategory === 'frontend'"
+					(click)="updateCategory('frontend')"
+					aria-label="Filtrar por projetos Frontend"
 				>
-				  Frontend
+					Frontend
 				</button>
 				<button
-				  class="btn filter-button"
-				  [class.active]="selectedCategory === 'backend'"
-				  (click)="updateCategory('backend')"
+					class="btn filter-button"
+					[class.active]="selectedCategory === 'backend'"
+					(click)="updateCategory('backend')"
+					aria-label="Filtrar por projetos Backend"
 				>
-				  Backend
+					Backend
 				</button>
 				<button
-				  class="btn filter-button"
-				  [class.active]="selectedCategory === 'games'"
-				  (click)="updateCategory('games')"
+					class="btn filter-button"
+					[class.active]="selectedCategory === 'games'"
+					(click)="updateCategory('games')"
+					aria-label="Filtrar por projetos de Games"
 				>
-				  Games
+					Games
 				</button>
 				<button
-				class="btn filter-button"
-				[class.active]="selectedCategory === 'opensource'"
-				(click)="updateCategory('opensource')"
-			  >
-				Open Source
-			  </button>
-			  <button
-				class="btn filter-button"
-				[class.active]="selectedCategory === 'algorithm'"
-				(click)="updateCategory('algorithm')"
-			  >
-				Algoritmos & Lógica
-			  </button>
-			  </div>
+					class="btn filter-button"
+					[class.active]="selectedCategory === 'opensource'"
+					(click)="updateCategory('opensource')"
+					aria-label="Filtrar por projetos de Código Aberto"
+				>
+					Open Source
+				</button>
+				<button
+					class="btn filter-button"
+					[class.active]="selectedCategory === 'algorithm'"
+					(click)="updateCategory('algorithm')"
+					aria-label="Filtrar por projetos de Algoritmos e Lógica"
+				>
+					Algoritmos & Lógica
+				</button>
+			</div>
 
-			  <div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo | categoryFilter:selectedCategory">
-				<div class="card custom-card rounded-0" [class]="card.category">
-					<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: 225px;">
+			<div class="col-sm-6 col-md-4 col-lg-3 custom-size" *ngFor="let card of cardsInfo | categoryFilter:selectedCategory">
+				<div class="card custom-card rounded-0" [class]="card.category" role="article">
+					<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" loading="lazy" width="100%" height="auto" role="img" [attr.aria-label]="card.altTitle + ' - Imagem do Projeto'">
 					<div class="card-badges">
 						<span class="badge" *ngFor="let tag of card.badges">{{ tag }}</span>
 					</div>
 					<div class="card-body">
-						<h3 class="card-title">{{ card.titleProject }}</h3>
-						<p class="card-text">{{ card.description }}</p>
+						<h3 class="card-title" role="heading" aria-level="3">{{ card.titleProject }}</h3>
+						<p class="card-text" role="paragraph">{{ card.description }}</p>
 						<div class="container-btns">
 							<a [href]="card.liveUrl === '#' ? null : card.liveUrl" target="_blank" class="btn btn-primary" [class.disabled-button]="card.liveUrl === '#'">
-							  <div class="btn-content">
-								Ver
-								<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-								  <image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
-								</svg>
-							  </div>
+								<div class="btn-content">
+									Ver
+									<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+										<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"/>
+									</svg>
+								</div>
 							</a>
 							<a [href]="card.codeUrl === '#' ? null : card.codeUrl" target="_blank" class="btn btn-primary" [class.disabled-button]="card.codeUrl === '#'">
-							  <div class="btn-content">
-								Fonte
-								<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-								  <image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
-								</svg>
-							  </div>
+								<div class="btn-content">
+									Fonte
+									<svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+										<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"/>
+									</svg>
+								</div>
 							</a>
-						  </div>						  
+						</div>
 					</div>
 				</div>
 			</div>

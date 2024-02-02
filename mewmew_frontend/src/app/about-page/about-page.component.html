@@ -1,22 +1,19 @@
 <app-navbar></app-navbar>
-<section role="region" class="container-fluid" id="about" aria-labelledby="aboutHeading" aria-live="polite">
+
+<!-- ======================================== ABOUT ME ======================================== -->
+<section role="region" aria-labelledby="aboutHeading" aria-live="polite" class="container-fluid" id="about" tabindex="0">
 	<div class="container">
 		<div class="row">
 			<div class="d-flex flex-column flex-lg-row about__content">
 				<div class="col-lg-8 col-md-12 order-lg-1 order-2 about__info">
-					<h1 id="aboutHeading" class="about__title"><span> 01. </span>Sobre Mim <div class="line"></div></h1>
-					<p class="about__description">
+					<h1 id="aboutHeading" class="about__title" role="heading" aria-level="2"><span> 01. </span>Sobre Mim <div class="line"></div></h1>
+					<p class="about__description" role="paragraph">
 						Olá, eu sou a Larissa, também conhecida como Mewmew/Larcrist! <br><br>
-						Sou uma pessoa criativa, empática, com um toque non-sense e apaixonada por desenvolver experiências digitais. Desenvolvo projetos do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para os usuários. <br><br>
-						<a href="https://br.fiverr.com/mewmewdevart" target="_blank" aria-label="Freelancer em PixelArt">
-							<span>Freelancer em PixelArt</span>
-						</a> nas horas vagas, fundadora do projeto 
-						<a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario">
-							<span>DevSolidario</span>
-						</a>  e participante ativa de comunidades Open-Source. <br> Meu foco é na qualidade de código, aplicando boas práticas de arquitetura de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender sobre outras areas da tecnologia.
+						Sou <a href="https://br.fiverr.com/mewmewdevart" target="_blank" aria-label="Freelancer em PixelArt"><span>Freelancer em ilustrações em Pixel Art</span></a>,
+						fundadora do projeto <a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario"><span>DevSolidário</span></a> e participante ativa de comunidades de código aberto. Meu foco é na qualidade de código, aplicando boas práticas de arquitetura e metodologias de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender outras áreas de tecnologia.
 					</p>
 					<h2>Desenvolvedora de Software com habilidades diversas/</h2>
-					<ul>
+					<ul role="list">
 						<li><span>Programação</span>: FrontEnd (SASS/SCSS, Angular[Material UI e PO-UI]/React/Bootstrap), BackEnd (C [Ponteiros, alocação de memória, structs, entrada/saída etc.], automação com Shell Script e conceitos básicos em Python/Java).</li>
 						<li><span>Qualidade</span>: Acessibilidade WCAG, Clean Code, Test-Driven Development (TDD).</li>
 						<li><span>Softwares e Plataformas</span>: Git (pull, commit, branching, merging, rebase), Docker, conceitos de Amazon Web Services (AWS), Figma (Prototipação de interfaces), Adobe (Photoshop, Illustrator e After Effects).</li>
@@ -25,18 +22,19 @@
 						<li><span>Idiomas</span>: Português Brasileiro (Nativo), Inglês (Intermediário), Francês (Básico), Libras (Intermediário).</li>
 					</ul>
 				</div>
-				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image" >
-					<img src="../../assets/assets/images/image1.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado">
+				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image">
+					<img src="../../assets/assets/images/image1.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado interagindo com o camputador" loading="lazy" width="100%" height="auto" rel="preload">
 				</div>
 			</div>
 			<div class="about__additional-info">
-                <p>
-                    Sou <span> Tecnóloga em Jogos Digitais </span> pela Faculdade Impacta Tecnologia/2020, onde recebi uma bolsa de estudos do Instituto IT MÍDIA em parceria com o Instituto da Oportunidade - TOTVS. Além disso, sou <span>ex-aluna em Engenharia de Software </span>da 42 São Paulo, uma das melhores escolas de tecnologia do mundo, e da Brazilian Advanced Team - San Jose Institute of Technology, programa de capacitação em <span>Segurança da Informação para brasileiros</span>.<span> Amo programar, desenhar, criar e documentar. Flerto com o FrontEnd, Backend, UX/UI Design, Ilustração, QA, Metodologias, Sistemas Operacionais e Idiomas </span>.
-                    <br> <br>
-                    Participo de maratonas de desenvolvimento de jogos, me voluntario para eventos de tecnologia, participo de comunidades open-source e estudo de forma autodidata, almejando tornar-me uma especialista em TI.
-                </p>
-            </div>
+				<p role="paragraph">
+					Sou <span> Tecnóloga em Jogos Digitais </span> pela Faculdade Impacta Tecnologia/2020, onde recebi uma bolsa de estudos do Instituto IT MÍDIA em parceria com o Instituto da Oportunidade - TOTVS. Além disso, sou <span>ex-aluna em Engenharia de Software </span>da 42 São Paulo, uma das melhores escolas de tecnologia do mundo, e da Brazilian Advanced Team - San Jose Institute of Technology, programa de capacitação em <span>Segurança da Informação para brasileiros</span>.<span> Amo programar, desenhar, criar e documentar. Flerto com o FrontEnd, Backend, UX/UI Design, Ilustração, QA, Metodologias, Sistemas Operacionais e Idiomas </span>.
+					<br> <br>
+					Participo de maratonas de desenvolvimento de jogos, me voluntario para eventos de tecnologia, participo de comunidades open-source e estudo de forma autodidata, almejando tornar-me uma especialista em TI.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
+
 <app-footer></app-footer>

@@ -25,6 +25,8 @@ mat-toolbar
 				position: absolute
 				bottom: 0
 			.toolbar__lineSocials
+				background-color: $colorMainBackground
+				outline: solid 10px $colorMainBackground
 				width: 32px
 				display: flex
 				flex-direction: column-reverse
@@ -52,14 +54,14 @@ mat-toolbar
 				gap: 10px
 				padding: 5px 10px
 				font-size: $fontMediumSize
-				color: $colorTertiary
+				color: $colorSecondary
 				font-weight: bold
 				cursor: pointer
 			button, .toolbar__button
 				border-radius: 0 !important
 				.toolbar__menu-text
 					font-size: $fontMediumSize
-					color: $colorTertiary
+					color: $colorSecondary
 				.cv
 					border: 2px solid $colorMainLight
 					padding: 7px 7px

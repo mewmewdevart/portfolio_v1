@@ -118,10 +118,14 @@ button
 			&:focus
 				outline: 2px solid $colorMainLight
 	
+.disabled-button
+	opacity: 0.8 !important
+	pointer-events: none
+
 
 @media screen and (max-width: 1200px)
 	#projects
-		.container-fluid
+		.container
 			.custom-size
 				margin-top: 5%
 			.about__title
@@ -150,6 +154,4 @@ button
 	background-color: $colorMainLight
 	color: $colorMainBackground
 
-.disabled-button
-	opacity: 0.8 !important
-	pointer-events: none
+	
