@@ -18,7 +18,7 @@ export class HomePageComponent implements OnInit {
 
 		this.communicationService.getCardsInfo().subscribe(
 			(data: CardInfo[]) => {
-				console.log('Dados dos cards:', data);
+				//console.log('Dados dos cards:', data);
 				this.cardsInfo = data;
 			},
 			(error) => {
