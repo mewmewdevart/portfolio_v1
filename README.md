@@ -1,5 +1,4 @@
-![Screenshot from 2024-01-14 22-21-48](https://github.com/mewmewdevart/portfolio_v1/assets/50052600/e09a940f-15ef-478a-9bad-8d0acfa8b05f)
-
+![Screenshot from 2024-02-02 16-15-34](https://github.com/mewmewdevart/portfolio_v1/assets/50052600/daed6ebb-d9fe-49eb-8607-c7e3b5d8988f)
 
 <div align="center">
   <img src="https://github.com/mewmewdevart/portfolio_v1/assets/50052600/8d5ccdd2-3d6d-454a-9015-801bdcfbe9ed" width="50">
@@ -24,12 +23,14 @@ Meu portfólio construído com Angular[Material UI].</i></b><br>
 
 ## O projeto 👩🏿‍💻
 ## Estrutura do diretório/
+- mewmew_frontend/
+- mewmew_backend/
 
 
 ## Instruções  🔧
 
 ### Pré-Requisitos
-Para executar o projeto localmente, é necessário ter instalados em sua máquina os seguintes requisitos: [Node.js](https://nodejs.org/en), [Angular CLI](https://angular.io/cli) e [Json Server](https://www.npmjs.com/package/json-server). Após a instalação, é preciso também instalar as dependências do arquivo package.json. Para isso, digite o comando npm install após seguir os passos anteriores.
+Para executar o projeto localmente, é necessário ter instalados em sua máquina os seguintes requisitos: [Node.js](https://nodejs.org/en), [Angular CLI](https://angular.io/cli). Após a instalação, é preciso também instalar as dependências do arquivo package.json. Para isso, digite o comando npm install após seguir os passos anteriores.
 
 ❗️| Certifique-se de que todas as ferramentas necessárias estejam instaladas em sua máquina local e, em seguida, prossiga com os seguintes passos. <br>
 
@@ -45,6 +46,11 @@ $ git clone https://github.com/mewmewdevart/portfolio_v1.git
 $ cd portfolio_v1/mewmew_p1
 ```
 
+```bash
+# Interaja com O FrontEnd
+$ cd portfolio_v1/mewmew_p1/mewmew_frontend
+```
+
 **1. Instale as dependências**
 
 ```bash
@@ -57,14 +63,7 @@ npm install
 ng serve
 ```
 
-3. Iniciar o banco de dados 
-Em outro terminal, inicie o servidor da API REST falsa, o json-server em conjunto com o db.json:
-
-```bash
-json-server --watch db.json
-```
-
-**3. Retorne para o primeiro terminal, e acesse o link gerado no prompt no seu navegador web**
+**3. Acesse o link gerado no prompt no seu navegador web com base na rota 0000 informada:**
 ```bash
 http://localhost:4200
 ```
