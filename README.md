@@ -22,6 +22,8 @@ Meu portfólio construído com Angular[Material UI].</i></b><br>
 </p>
 
 ## O projeto 👩🏿‍💻
+Desenvolvi-o utilizando o  **Angular** para o frontend e **NodeJS** com Express para o backend. Foi incrível construí-lo do início ao fim; passei por todas as etapas de desenvolvimento, desde a prototipação do design no **Figma** até a aplicação das melhores técnicas de  **SEO** e acessibilidade para ajudá-lo no ranqueamento, e muito mais. Foi um misto de aprimoramento em tecnologias que já utilizava e aprendizado. 💜
+
 ## Estrutura do diretório/
 - mewmew_frontend/
 - mewmew_backend/
@@ -80,6 +82,7 @@ http://localhost:4200
 - [Markdown](https://www.markdownguide.org/basic-syntax/) | Documentação de como utilizar o Markdown.
 - [Documentação W3Schools](https://www.w3schools.com/) | Documentação e tutoriais praticos.
 - [Figma Community](https://www.figma.com/community) | Inspiração na prototipação do projeto.
+- Brittany Chiang | Inspiração no Portfolio dela
 - +Forums e Blogs da internet para sanar as minhas duvidas relacionadas a linguagem (Alura, Stack Overflow e Geeks for geeks).
 
 ## 📜 Licença
