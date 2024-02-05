@@ -44,7 +44,7 @@
 					(click)="updateCategory('opensource')"
 					aria-label="Filtrar por projetos de Código Aberto"
 				>
-					Open Source
+					Contribuições
 				</button>
 				<button
 					class="btn filter-button"
@@ -86,6 +86,7 @@
 					</div>
 				</div>
 			</div>
+			<p class="texto-oculto" *ngIf="(selectedCategory !== 'TODOS' && (cardsInfo | categoryFilter:selectedCategory).length === 0) || (selectedCategory === 'TODOS' && cardsInfo.length === 0)">//Em desenvolvimento!</p>
 		</div>
 	</div>
 </section>

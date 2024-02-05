@@ -41,3 +41,46 @@ footer
 			.footer__lineSocials
 				display: flex
 				padding-bottom: 3%
+
+
+.scrollTop
+	position: absolute
+	width: 45px
+	height: 70px
+	display: flex
+	right: 5%
+	transform: rotate(180deg)
+	span
+		width: 5px
+		height: 10px
+		border-radius: 30px
+		margin-top: 10px
+		position: relative
+		&::before, &::after
+			position: absolute
+			content: ''
+			width: 15px
+			height: 15px
+			border: none
+			border-right: 2px solid $colorSecondary
+			border-top: 2px solid $colorSecondary
+			transform: translateY(-10px) rotate(135deg)
+			left: -5px
+			margin-top: 10px
+			opacity: 0
+			animation: animationTop 1.8s infinite linear
+		&::after
+			animation-delay: 0.8s
+
+@keyframes animationTop
+	0%
+		margin-top: 10px
+		opacity: 0
+
+	50%
+		margin-top: 25px
+		opacity: 1
+
+	100%
+		margin-top: 40px
+		opacity: 0
