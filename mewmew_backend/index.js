@@ -50,9 +50,9 @@ app.get('/api/cards-info', (req, res) => {
 		category: 'frontend',
 		favorite: true,
 		titleProject: 'Site da Clarke Energia',
-		altTitle: 'Site Institucional da Clarke Banner das artes feitas',
+		altTitle: 'Site Institucional da Clarke - Banner',
 		badges: ['React', 'Tailwind', 'Firebase', 'SEO'],
-		description: 'Site da @ClarkeEnergia feito utilizando principalmente React e Tailwind',
+		description: 'Site da ClarkeEnergia feito utilizando React e Tailwind',
 		liveUrl: 'https://clarke.com.br/',
 		codeUrl: '#'
 	},
@@ -81,7 +81,7 @@ app.get('/api/cards-info', (req, res) => {
 	{
 		imagePath: 'https://i.imgur.com/CWPGzsS.png',
 		category: 'frontend',
-		favorite: false,
+		favorite: true,
 		titleProject: 'WebDev4Fun',
 		altTitle: 'WebDevelopment4Fun Banner das artes feitas',
 		badges: ['JS', 'Frameworks', 'HTML/CSS'],
