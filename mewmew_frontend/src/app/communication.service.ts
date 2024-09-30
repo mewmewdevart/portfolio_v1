@@ -31,9 +31,9 @@ export interface CardInfo {
 	providedIn: 'root'
 })
 export class CommunicationService {
-	private apiUrl = 'https://mewmewdev-backend.vercel.app/api';
+	private apiUrl = 'https://portfolio-backend-v2-delta.vercel.app/api';
 	private isLoading = new BehaviorSubject<boolean>(false);
-  isLoading$ = this.isLoading.asObservable();
+	isLoading$ = this.isLoading.asObservable();
 
 	show(): void {
 		this.isLoading.next(true);
