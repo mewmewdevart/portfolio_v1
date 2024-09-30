@@ -49,9 +49,9 @@ app.get('/api/cards-info', (req, res) => {
 		imagePath: 'https://i.imgur.com/8AKnL7E.png',
 		category: 'frontend',
 		favorite: true,
-		titleProject: 'Front4Fun',
+		titleProject: 'Site Institucional',
 		altTitle: 'Site Institucional da Clarke Banner das artes feitas',
-		badges: ['Html5', 'Css3'],
+		badges: ['React', 'Tailwind', 'Firebase', 'SEO'],
 		description: 'Site da @ClarkeEnergia feito utilizando principalmente React e Tailwind',
 		liveUrl: 'https://clarke.com.br/',
 		codeUrl: '#'
@@ -92,7 +92,7 @@ app.get('/api/cards-info', (req, res) => {
 	{
 		imagePath: 'https://i.imgur.com/TIQvkLw.png',
 		category: 'opensource',
-		favorite: true,
+		favorite: false,
 		titleProject: 'HumanCoderXP',
 		altTitle: 'Foto de uma pessoa interagindo com o kinect para jogar',
 		badges: ['Javascript', 'Arte','Jogo'],
@@ -103,7 +103,7 @@ app.get('/api/cards-info', (req, res) => {
 	{
 		imagePath: 'https://i.imgur.com/tKl72Jc.png',
 		category: 'opensource',
-		favorite: true,
+		favorite: false,
 		titleProject: 'Dojo de CSS',
 		altTitle: 'Foto do desafio sendo feito entre os alunos em diferentes computadores',
 		badges: ['Html5', 'Css3', 'Figma'],
