@@ -49,7 +49,7 @@ app.get('/api/cards-info', (req, res) => {
 		imagePath: 'https://i.imgur.com/8AKnL7E.png',
 		category: 'frontend',
 		favorite: true,
-		titleProject: 'Site Institucional',
+		titleProject: 'Site da Clarke Energia',
 		altTitle: 'Site Institucional da Clarke Banner das artes feitas',
 		badges: ['React', 'Tailwind', 'Firebase', 'SEO'],
 		description: 'Site da @ClarkeEnergia feito utilizando principalmente React e Tailwind',
