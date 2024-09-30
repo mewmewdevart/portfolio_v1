@@ -10,7 +10,7 @@
 		"build:prod": "ng build && npm run minify",
 		"minify": "if [ -f dist/main.js ]; then terser --compress --mangle --output dist/main.js dist/main.js; fi",
 		"minify:css": "sass src/styles.scss | cssnano > dist/styles.min.css"
-	},	
+	},
 	"private": true,
 	"dependencies": {
 		"@angular/animations": "^16.2.0",
@@ -23,6 +23,7 @@
 		"@angular/platform-browser": "^16.2.0",
 		"@angular/platform-browser-dynamic": "^16.2.0",
 		"@angular/router": "^16.2.0",
+		"@fortawesome/fontawesome-free": "^6.6.0",
 		"css-init": "^1.2.14",
 		"node-sass": "^9.0.0",
 		"rxjs": "~7.8.0",

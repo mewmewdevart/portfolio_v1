@@ -45,6 +45,44 @@ button
 			h2
 				color: $colorMainLight
 				font-weight: 500
+			h3, h4
+				color: $colorMainLight
+				font-size: 16px
+				font-weight: 500
+
+			.content
+				display: flex
+				align-items: center
+				gap: 10px
+			.icon-container
+				position: relative
+				display: inline-block
+			.fab
+				font-size: 38px
+
+			.icon-img
+				width: 38px
+
+			.icon-text
+				visibility: hidden
+				position: absolute
+				top: 25px
+				left: 0
+				background-color: #fff
+				border: 1px solid #ccc
+				padding: 5px
+				border-radius: 4px
+				white-space: nowrap
+				z-index: 1
+			
+			.tech-list
+				display: flex
+				flex-direction: column
+				gap: 10px
+
+			.icon-container:hover .icon-text
+				visibility: visible
+
 			button
 				display: inline-flex
 				padding: 12px 16px
@@ -62,6 +100,8 @@ button
 					outline: 2px solid $colorMainLight
 		span
 			color: $colorMainLight
+		.softGray
+			color: gray
 		.about__image
 			display: flex
 			align-items: baseline

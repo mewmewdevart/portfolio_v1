@@ -4,138 +4,291 @@
 
 <!-- ======================================== HOME ======================================== -->
 <section role="region" class="container-fluid" id="home" aria-labelledby="homeHeading" aria-live="polite">
-	<div class="container">
-		<div class="row">
-			<div class="d-flex justify-content-between home__main">
-				<div class="col col-lg-6 home__introduction">
-					<h1 id="homeHeading" class="home__title">Larissa é<span class="home__subtitle"> Desenvolvedora de Software</span> e <span class="home__subtitle">Designer</span></h1>
-					<p class="home__description">
-						Ela cria experiências, mesclando a tecnologia com o design.<br>
-						Apaixonada pelas pessoas e pelo mundo tecnológico, dedica-se ao desenvolvimento de aplicações que cativem o usuário. <br>
-					</p>
-					<button class="home__button" (click)="navigate('contact')" aria-label="Contate Larissa" role="button">Entre em contato</button>
-				</div>
-				<div class="col col-lg-3 home__bar">
-					<p class="home__bar-description">
-						<svg fill="#c28eff" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#c28eff" stroke-width="0.8" aria-hidden="true" class="card-right__icon">
-							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-							<g id="SVGRepo_iconCarrier">
-								<path d="M 6 6 L 6 26 L 26 26 L 26 6 L 6 6 z"></path>
-							</g>
-						</svg>
-						<span class="home__bar-subtitle">Atualmente, estudando </span>
-						<span class="home__bar-letter">&#160; TI </span>
-					</p>
-				</div>
-			</div>
-		</div>
-		<a href="#about" class="scrollDown" role="button" aria-label="Navegar para a seção 'Sobre'" tabindex="0" matTooltip="Navegar para a seção 'Sobre'" matTooltipPosition="right">
-			<span aria-hidden="true"></span>
-		</a>				
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-between home__main">
+        <div class="col col-lg-6 home__introduction">
+          <h1 id="homeHeading" class="home__title">
+            Larissa é<span class="home__subtitle">
+              Desenvolvedora de Software</span>
+            e <span class="home__subtitle">Designer</span>
+          </h1>
+          <p class="home__description">
+            Ela cria experiências, mesclando a tecnologia com o design.<br />
+            Apaixonada pelas pessoas e pelo mundo tecnológico, dedica-se ao
+            desenvolvimento de aplicações que cativem o usuário. <br />
+          </p>
+          <button class="home__button" (click)="navigate('contact')" aria-label="Contate Larissa" role="button">
+            Entre em contato
+          </button>
+        </div>
+        <div class="col col-lg-3 home__bar">
+          <p class="home__bar-description">
+            <svg fill="#c28eff" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#c28eff"
+              stroke-width="0.8" aria-hidden="true" class="card-right__icon">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M 6 6 L 6 26 L 26 26 L 26 6 L 6 6 z"></path>
+              </g>
+            </svg>
+            <span class="home__bar-subtitle">Atualmente, procurando por </span>
+            <span class="home__bar-letter">&#160; oportunidades </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scrollDown" role="button" aria-label="Navegar para a seção 'Sobre'" tabindex="0"
+      matTooltip="Navegar para a seção 'Sobre'" matTooltipPosition="right">
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 </section>
-
 
 <!-- ======================================== ABOUT ME ======================================== -->
 <section role="region" class="container-fluid" id="about" aria-labelledby="aboutHeading" aria-live="polite">
-	<div class="container">
-		<div class="row">
-			<div class="d-flex flex-column flex-lg-row about__content">
-				<div class="col-lg-8 col-md-12 order-lg-1 order-2 about__info">
-					<h1 id="aboutHeading" class="about__title"><span> 01. </span>Sobre Mim <div class="line"></div></h1>
-					<p class="about__description">
-						Olá, eu sou a Larissa, também conhecida como Mewmew/Larcrist! <br> <br>
-						Sou uma pessoa criativa, empática, com um toque non-sense e apaixonada por desenvolver experiências digitais. Desenvolvo projetos do zero, percorrendo todas as etapas do desenvolvimento, utilizando recursos modernos e amigáveis para os usuários.  <br> <br>
-						Sou <a href="https://br.fiverr.com/mewmewdevart" target="_blank" aria-label="Freelancer em PixelArt"><span>Freelancer em ilustrações em Pixel Art</span> </a> ,fundadora do projeto <a href="https://www.linkedin.com/company/devsolidario" target="_blank" aria-label="DevSolidario"><span>DevSolidário</span></a>  e participante ativa de comunidades de código aberto. Meu foco é na qualidade de código, aplicando boas práticas de arquitetura e metodologias de software ao desenvolver aplicações, seja na web, desktop ou em jogos. Gosto de compartilhar e receber conhecimento, sempre em busca de aprendizado. Costumo dizer que estou sempre em desenvolvimento e disposta a aprender outras áreas de tecnologia.
-						
-					</p>
-					<h2>Desenvolvedora de Software com habilidades diversas/</h2>
-					<ul>
-						<li><span>Programação</span>: FrontEnd (SASS/SCSS, Angular[Material UI e PO-UI]/React/Bootstrap), BackEnd (C [Ponteiros, alocação de memória, structs, entrada/saída etc.], automação com Shell Script e conceitos básicos em Python/Java).</li>
-						<li><span>Qualidade</span>: Acessibilidade WCAG, Clean Code, Test-Driven Development (TDD). <div class="showLI">// Clique no botão para continuar a leitura ↓</div></li>
-						<li class="showLi-group"><span>Softwares e Plataformas </span>: Git (pull, commit, branching, merging, rebase), Docker, conceitos de Amazon Web Services (AWS), Figma (Prototipação de interfaces), Adobe (Photoshop, Illustrator e After Effects).</li>
-						<li class="showLi-group"><span>Metodologias e organização </span>: Scrum e Kanban, GSUIT, Slack, Microsoft Teams, Discord.</li>
-						<li class="showLi-group"><span>Sistemas operacionais </span>: Linux (Administração de redes e configuração de sistemas), Windows +7 (Prompt, gerenciamento de discos e controle de usuários).</li>
-						<li class="showLi-group"><span>Idiomas</span>: Português Brasileiro (Nativo), Inglês (Intermediário), Francês (Básico), Libras (Intermediário).</li>
-					</ul>
-					<button class="about__button" aria-label="Contate Larissa" role="button" (click)="navigateToAbout()">Saiba mais</button>
-				</div>
-				<div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image" >
-					<img src="../../assets/assets/images/image.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado" loading="lazy" width="100%" height="auto" rel="preload">
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex flex-column flex-lg-row about__content">
+        <div class="col-lg-8 col-md-12 order-lg-1 order-2 about__info">
+          <h1 id="aboutHeading" class="about__title">
+            <span> 01. </span>Sobre Mim
+            <div class="line"></div>
+          </h1>
+          <p class="about__description">
+            Olá, eu sou a Larissa, também conhecida como Mewmew/Larcrist!
+            <br /><br />
+
+            Sou uma pessoa criativa, empática, com um toque non-sense e
+            apaixonada por desenvolver experiências digitais. Desenvolvo
+            projetos do zero, percorrendo todas as etapas do desenvolvimento,
+            utilizando recursos modernos e amigáveis para os usuários.
+            <br /><br />
+            Atuo como desenvolvedora Full Stack, com expertise em Front-end.
+            Minhas habilidades incluem a implementação de layouts responsivos e
+            acessiveis, a criação de APIs eficientes e a modelagem de bancos de
+            dados. Além disso, sou
+            <a href="https://br.fiverr.com/mewmewdevart" target="_blank"
+              aria-label="Freelancer em PixelArt"><span>Freelancer em ilustrações em Pixel Art</span> </a>, criando
+            identidades visuais personalizadas para streamers
+            internacionais, e presto serviços de freelancer como Desenvolvedora
+            Web.
+          </p>
+          <h2>Desenvolvedora de Software com habilidades diversas/</h2>
+          <ul class="tech-list">
+            <h4>Front-End:</h4>
+            <div class="content">
+              <div class="icon-container">
+                <i class="fab fa-js"></i>
+                <span class="icon-text">JavaScript: Linguagem para interatividade.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/typescript.svg" class="icon-img" alt="Ícone do TypeScript" />
+                <span class="icon-text">TypeScript: Tipagem estática para JavaScript.</span>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-angular"></i>
+                <span class="icon-text">Angular: Framework para SPAs.</span>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-react"></i>
+                <span class="icon-text">React: Framework para interfaces dinâmicas.</span>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-css3-alt"></i>
+                <span class="icon-text">CSS (SASS, SCSS): Estilização eficiente de páginas.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/bootstrap.svg" class="icon-img" alt="Ícone do Bootstrap" />
+                <span class="icon-text">Bootstrap: Framework para sites responsivos.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/tailwind.svg" class="icon-img" alt="Ícone do Tailwind CSS" />
+                <span class="icon-text">Tailwind: CSS utilitário para designs personalizados.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/po-ui.svg" class="icon-img" alt="Ícone do PO-UI" />
+                <span class="icon-text">PO-UI - TOTVS: Componentes prontos para Angular.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/material.svg" class="icon-img" alt="Ícone do Material UI" />
+                <span class="icon-text">Material UI: Componentes React com design moderno.</span>
+              </div>
+            </div>
+          </ul>
+
+          <ul class="tech-list">
+            <h4>Back-End:</h4>
+            <div class="content">
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/c.svg" class="icon-img" alt="Ícone do C" />
+                <span class="icon-text">C: Linguagem de programação de baixo nível.</span>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-python"></i>
+                <span class="icon-text">Python: Linguagem de programação versátil.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/advpl.svg" class="icon-img" alt="Ícone do Advpl" />
+                <span class="icon-text">Advpl: Linguagem de programação empresarial.</span>
+              </div>
+            </div>
+          </ul>
+
+          <ul class="tech-list">
+            <h4>Automações e testes</h4>
+            <div class="content">
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/bash.svg" class="icon-img" alt="Ícone do Bash Script" />
+                <span class="icon-text">Bash Script: Scripts para automação de tarefas.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/cypress.svg" class="icon-img" alt="Ícone do Cypress" />
+                <span class="icon-text">Cypress: Testes unitários para aplicações web.</span>
+              </div>
+            </div>
+          </ul>
+
+          <ul class="tech-list">
+            <h4>Softwares e Plataformas:</h4>
+            <div class="content">
+              <div class="icon-container">
+                <i class="fab fa-git"></i>
+                <span class="icon-text">Git: Controle de versões de código.</span>
+              </div>
+              <div class="icon-container">
+                <i class="fab fa-github"></i>
+                <span class="icon-text">GitHub: Plataforma para colaboração em projetos.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/docker.svg" class="icon-img" alt="Ícone do Docker" />
+                <span class="icon-text">Docker: Contêineres para simplificar deploys.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/slack.svg" class="icon-img" alt="Ícone do Slack" />
+                <span class="icon-text">Slack: Comunicação em equipe eficiente.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/microsoft-office.svg" class="icon-img"
+                  alt="Ícone do Microsoft Office" />
+                <span class="icon-text">Microsoft Office: Ferramentas de produtividade.</span>
+              </div>
+              <div class="icon-container">
+                <span class="icon-text">CI/CD: Integração e entrega contínuas.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/seo.svg" class="icon-img" alt="Ícone do SEO" />
+                <span class="icon-text">SEO: Otimização para motores de busca.</span>
+              </div>
+            </div>
+          </ul>
+
+          <ul class="tech-list">
+            <h4>Sistemas Operacionais:</h4>
+            <div class="content">
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/windows.svg" class="icon-img" alt="Ícone do Windows" />
+                <span class="icon-text">Windows: Sistema operacional popular.</span>
+              </div>
+              <div class="icon-container">
+                <img src="../../assets/assets/images/icons/linux.svg" class="icon-img" alt="Ícone do Linux" />
+                <span class="icon-text">Linux: Sistema operacional de código aberto.</span>
+              </div>
+            </div>
+          </ul>
+          <button class="about__button" aria-label="Contate Larissa" role="button" (click)="navigateToAbout()">
+            Saiba mais
+          </button>
+        </div>
+        <div class="col-lg-4 col-md-12 order-lg-2 order-1 about__image">
+          <img src="../../assets/assets/images/image.webp" alt="Foto da Larissa: Mulher negra de cabelo cacheado"
+            loading="lazy" width="100%" height="auto" rel="preload" />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ======================================== PROJECTS ======================================== -->
 <section role="region" class="container-fluid" id="projects" aria-labelledby="projectsHeading">
-	<div class="container">
-	  <div class="row flex-wrap">
-		<h2 id="projectsHeading" class="about__title"><span> 02. </span>Projetos <div class="line"></div></h2>
-  
-		<div class="col-sm-6 col-md-6 col-lg-3 custom-size" *ngFor="let card of cardsInfo">
-			<div *ngIf="card.favorite" class="card custom-card rounded-0">
-			<img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}" style="width: 100%; height: auto;">
-			  <div class="card-badges">
-				<span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
-			  </div>
-			  <div class="card-body">
-				<h3 class="card-title">{{ card.titleProject }}</h3>
-				<p class="card-text">{{ card.description }}</p>
-				<div class="container-btns ">
-					<a [href]="card.liveUrl === '#' ? null : card.liveUrl" target="_blank" class="btn btn-primary" [class.disabled-button]="card.liveUrl === '#'">
-					<div class="btn-content">
-					  Ver
-					  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-						<image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100" loading="eager"/>
-					  </svg>
-					</div>
-				  </a>
-				  <a [href]="card.codeUrl" target="_blank" class="btn btn-primary">
-					<div class="btn-content">
-					  Código
-					  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
-						<image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100" loading="eager"/>
-					  </svg>
-					</div>
-				  </a>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  <div class="col-12 text-center">
-			<button class="projects__button mx-auto btn btn-primary btn-lg btn-block col-md-3" aria-label="Saiba mais sobre os projetos" (click)="navigateToProjects()">
-			  Veja mais projetos
-			</button>
-		  </div>
-	  </div>
-	</div>
+  <div class="container">
+    <div class="row flex-wrap">
+      <h2 id="projectsHeading" class="about__title">
+        <span> 02. </span>Projetos
+        <div class="line"></div>
+      </h2>
+
+      <div class="col-sm-6 col-md-6 col-lg-3 custom-size" *ngFor="let card of cardsInfo">
+        <div *ngIf="card.favorite" class="card custom-card rounded-0">
+          <img class="card-img-top rounded-0" [src]="card.imagePath" alt="{{ card.altTitle }}"
+            style="width: 100%; height: auto" />
+          <div class="card-badges">
+            <span class="badge badge-pill badge-light" *ngFor="let tag of card.badges">{{ tag }}</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{ card.titleProject }}</h3>
+            <p class="card-text">{{ card.description }}</p>
+            <div class="container-btns">
+              <a [href]="card.liveUrl === '#' ? null : card.liveUrl" target="_blank" class="btn btn-primary"
+                [class.disabled-button]="card.liveUrl === '#'">
+                <div class="btn-content">
+                  Ver
+                  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+                    <image href="../../assets/assets/images/icons/icon_live.svg" width="100" height="100"
+                      loading="eager" />
+                  </svg>
+                </div>
+              </a>
+              <a [href]="card.codeUrl === '#' ? null : card.codeUrl" target="_blank" class="btn btn-primary"
+                [class.disabled-button]="card.codeUrl === '#'">
+                <div class="btn-content">
+                  Código
+                  <svg width="32" height="32" viewBox="0 0 100 100" class="toolbar__logo">
+                    <image href="../../assets/assets/images/icons/icon_programming.svg" width="100" height="100"
+                      loading="eager" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <button class="projects__button mx-auto btn btn-primary btn-lg btn-block col-md-3"
+          aria-label="Saiba mais sobre os projetos" (click)="navigateToProjects()">
+          Veja mais projetos
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ======================================== CONTATO ======================================== -->
 <section role="region" class="container-fluid" id="contact" aria-labelledby="contactHeading">
-	<div class="container contact__info">
-		<div class="row contact">
-			<div class="col-md-12">
-				<h1 id="contactHeading" class="contact_title">
-					<span> 03. </span>
-					Contato 
-					<div class="line"></div>
-				</h1>
-				<p class="contact__description">
-					Tenho aprofundado os meus estudos em desenvolvimento de experiências e estou sempre em busca de novos desafios. <br>
-					 Caso queira conversar, tirar dúvidas, propor um projeto ou apenas dizer oi, a minha caixa de entrada está sempre aberta. Farei o possível para responder!
-				</p>
-			</div>
-			<div class="col-12 buttons">
-				<a href="mailto:mewmewdevart@gmail.com" class="contact__button" role="button" aria-label="Enviar email">Enviar email</a>
-				<a href="https://drive.google.com/drive/folders/1z4r5m8AN2afei71LQ4TQ8lVcCBUqBjN6?usp=sharing" target="_blank" class="contact__button" role="button" aria-label="Ver o currículo">Ver o currículo</a>
-			</div>
-		</div>
-	</div>
+  <div class="container contact__info">
+    <div class="row contact">
+      <div class="col-md-12">
+        <h1 id="contactHeading" class="contact_title">
+          <span> 03. </span>
+          Contato
+          <div class="line"></div>
+        </h1>
+        <p class="contact__description">
+          Tenho aprofundado os meus estudos em desenvolvimento de experiências e
+          estou sempre em busca de novos desafios. <br />
+          Caso queira conversar, tirar dúvidas, propor um projeto ou apenas
+          dizer oi, a minha caixa de entrada está sempre aberta. Farei o
+          possível para responder!
+        </p>
+      </div>
+      <div class="col-12 buttons">
+        <a href="mailto:mewmewdevart@gmail.com" class="contact__button" role="button" aria-label="Enviar email">Enviar
+          email</a>
+        <a href="https://drive.google.com/drive/folders/1z4r5m8AN2afei71LQ4TQ8lVcCBUqBjN6?usp=sharing" target="_blank"
+          class="contact__button" role="button" aria-label="Ver o currículo">Ver o currículo</a>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <app-footer></app-footer>

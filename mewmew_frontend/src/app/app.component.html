@@ -1,8 +1,8 @@
 
-<div *ngIf="service.isLoading$ | async">
+<!-- <div *ngIf="service.isLoading$ | async">
 	<app-loading></app-loading>
-</div>
+</div> -->
 
-<section id="mySite" *ngIf="!(service.isLoading$ | async)">
+<section id="mySite" >
 	<router-outlet></router-outlet> 
 </section>

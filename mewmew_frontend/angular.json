@@ -31,6 +31,7 @@
 						],
 						"styles": [
 							"@angular/material/prebuilt-themes/deeppurple-amber.css",
+							"node_modules/@fortawesome/fontawesome-free/css/all.min.css",
 							"src/styles.sass"
 						],
 						"scripts": []
@@ -104,5 +105,8 @@
 				}
 			}
 		}
-	}
+  },
+  "cli": {
+    "analytics": "65669260-d13d-46f9-b604-6e940d40f18d"
+  }
 }

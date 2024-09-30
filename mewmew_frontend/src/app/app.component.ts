@@ -9,7 +9,6 @@ import { CommunicationService } from './communication.service';
 export class AppComponent implements OnInit {
 	title = 'MewmewDev';
 
-
 	constructor(public service: CommunicationService) {}
 
 	ngOnInit() {
