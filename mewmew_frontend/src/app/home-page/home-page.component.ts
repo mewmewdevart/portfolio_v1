@@ -38,10 +38,10 @@ export class HomePageComponent implements OnInit {
 	}
 
 	navigateToProjects(): void {
-		window.location.href = 'more-projects';
+		window.location.href = 'projetos';
 	}
 
 	navigateToAbout(): void {
-		window.location.href = 'about-me';
+		window.location.href = 'sobre';
 	}
 }

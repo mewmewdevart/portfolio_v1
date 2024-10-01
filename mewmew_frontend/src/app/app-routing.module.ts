@@ -7,8 +7,8 @@ import { ResponseComponent } from './response/response.component';
 
 const routes: Routes = [
 	{ path: '', component: HomePageComponent },
-	{ path: 'more-projects', component: ProjectsPageComponent },
-	{ path: 'about-me', component: AboutPageComponent },
+	{ path: 'projetos', component: ProjectsPageComponent },
+	{ path: 'sobre', component: AboutPageComponent },
 	{ path: '**', component: ResponseComponent }
   ];  
 

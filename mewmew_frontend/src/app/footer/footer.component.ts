@@ -21,8 +21,8 @@ export class FooterComponent implements OnInit {
 		this.currentYear = new Date().getFullYear();
 		this.socialIcons = this.communicationService.socialItems;
 
-		const isProjectsPage = this.router.url.includes('more-projects');
-		const isAboutPage = this.router.url.includes('about-me');
+		const isProjectsPage = this.router.url.includes('projetos');
+		const isAboutPage = this.router.url.includes('sobre');
 
 		if (isProjectsPage || isAboutPage) {
 			this.isHomePage = false;

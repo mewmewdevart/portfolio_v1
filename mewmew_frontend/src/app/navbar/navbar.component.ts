@@ -30,8 +30,8 @@ export class NavbarComponent implements OnInit {
 	  }
 
 	  navigate(route: string): void {
-		const isProjectsPage = this.route.snapshot.routeConfig?.path === 'more-projects';
-		const isAboutPage = this.route.snapshot.routeConfig?.path === 'about-me';
+		const isProjectsPage = this.route.snapshot.routeConfig?.path === 'projetos';
+		const isAboutPage = this.route.snapshot.routeConfig?.path === 'sobre';
 	  
 		if (isProjectsPage) {
 		  this.router.navigate([''], { fragment: route });
